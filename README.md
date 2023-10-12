@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://github.com/MaykiSantos/SIAC/assets/58126683/3b1e27d1-31c4-40ba-b418-c35f664c6a07" alt="logo" width=300px>
+	<img src="https://raw.githubusercontent.com/SSEDG/SSEDG/main/doc/img/logo_ssedg2.png?token=GHSAT0AAAAAACHYI7UWEDELZEHVNHY5GPRAZJIB6YA" alt="logo" width=400px>
   	<h1>Simulador de Ambientes Inteligentes Compartilhados</h1>
 </div>
 <div>
@@ -7,7 +7,7 @@
 		<a href="#sobre">Sobre</a> •
     <a href="#instalacao">Instalação</a> •
 		<a href="#requisitos">Requisitos</a> •
-		<a href="#funcionamento">Funcionamento</a>
+		<a href="#cenarios">Cenários</a>
 	</p>
 </div>
 
@@ -77,7 +77,7 @@ Dormir, Caga, Mijar, Tomar banho, Escovar dentes, Café da manhã, Almoçar, Jan
 
 *PLANTA BASE:*
 
-![Integração -Arquiteturas_do_Sistema-Página-6 drawio (5)](https://github.com/MaykiSantos/SIAC/assets/58126683/b2ad202c-b455-4264-86f8-0f52f6f5b935)
+![planta_1](https://github.com/SSEDG/SSEDG/blob/main/doc/img/planta_1.png?raw=true)
 
 ### Grafo_casa-ROTINA_SIMPLES(Dividindo_ap)
 
@@ -101,7 +101,7 @@ Dormir, Caga, Mijar, Tomar banho, Escovar dentes, Café da manhã, Almoçar, Jan
 
 *PLANTA BASE:*
 
-![Integração -Arquiteturas_do_Sistema-Página-6 drawio (4)](https://github.com/MaykiSantos/SIAC/assets/58126683/e03ac2d6-6063-409d-a2a7-6b9d2a58d1d5)
+![planta_2](https://github.com/SSEDG/SSEDG/blob/main/doc/img/lanta_2.png?raw=true)
 
 
 
