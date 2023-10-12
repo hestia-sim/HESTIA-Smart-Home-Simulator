@@ -67,4 +67,5 @@ class Usuario:
         caminho = nx.astar_path(grafo, source=localAtual, target=objetivo)[1:]
         for i in caminho:
             if i.nome != objetivo:
+                self.comodo_atual = i
                 yield self.env.process(i.passar(self))
