@@ -25,6 +25,11 @@ A aplicação SSEDG é um sistema projetado para fornecer dados precisos e consi
 
 * **Variações nos Períodos de Atividade:** O sistema é flexível o suficiente para acomodar variações naturais nos horários das atividades dos moradores. Por exemplo, a hora de acordar ou dormir, ou os momentos de realizar atividades diárias, podem variar de um dia para o outro. A aplicação é capaz de acomodar essas variações para produzir dados que representem fielmente o comportamento real dos moradores.
 
+<h2 id="requisitos"> :toolbox: Requisitos</h2>
+
+* Python 3.10
+
+
 <h2 id="instalacao"> :books: Gerando os Dados</h2>
 
 Antes de tudo realize clone do repositório do projeto SSEDG para a sua máquina. Para isso execute os seguintes comando no terminal.
@@ -51,11 +56,6 @@ Ao executa-lo será solicitado:
 - A rotina a ser utilizada.
 
 A partir disso teremos, uma saída de dados **Simples** ou uma saída de dados **Completa**. Os dados gerados são armazenados na pasta */dados*
-
-
-<h2 id="requisitos"> :toolbox: Requisitos</h2>
-
-* Python 3.10
 
 <h2 id="cenarios">:gear: Cenários</h2>
 
