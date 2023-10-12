@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://raw.githubusercontent.com/SSEDG/SSEDG/main/doc/img/logo_ssedg2.png?token=GHSAT0AAAAAACHYI7UWEDELZEHVNHY5GPRAZJIB6YA" alt="logo" width=400px>
+	<img src="https://github.com/SSEDG/SSEDG/blob/main/doc/img/logo_ssedg2.png?raw=true" alt="logo" width=400px>
   	<h1>Simulador de Ambientes Inteligentes Compartilhados</h1>
 </div>
 <div>
