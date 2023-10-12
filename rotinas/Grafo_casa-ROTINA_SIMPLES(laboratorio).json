@@ -1,0 +1,404 @@
+{
+	"ATUADORES": ["PLUG", "INTERRUPOR", "SENSOR_PRESENCA", "ASPIRADOR", "SENSOR_PORTA"],
+	"COMODOS": {
+		"rua": {
+			"nome": "RUA",
+			"atuadores": [],
+            "ocupacao_maxima": 8
+		},
+		"sala": {
+			"nome": "SALA",
+			"atuadores": [
+				"PLUG_01", "PLUG_02", "PLUG_03", "PLUG_04", "PLUG_05", "PLUG_06", "PLUG_07", "PLUG_08", "PLUG_09",
+				"PLUG_10", "PLUG_11", "PLUG_12", "PLUG_13", "PLUG_14", "PLUG_15", "PLUG_16", "PLUG_17", "PLUG_18",
+				"PLUG_19", "PLUG_20", "PLUG_21", "PLUG_22", "PLUG_23", "PLUG_24", "PLUG_25", "PLUG_26", "PLUG_27",
+				"PLUG_28", "PLUG_29", "PLUG_30", "PLUG_31", "PLUG_32", "PLUG_33", "PLUG_34", "INTERRUPOR",
+				"SENSOR_PRESENCA", "ASPIRADOR", "SENSOR_PORTA"
+			],
+            "ocupacao_maxima": 8
+		}
+	},
+	"GRAFO_COMODOS": [
+		["RUA", "SALA"]
+	],
+	"ATIVIDADES": {
+		"Trabalhar_pc_01": {
+			"nome": "TRABALHAR_PC_01",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_01": "ON",
+				"PLUG_02": "ON",
+				"PLUG_03": "ON"
+			}
+		},
+		"Trabalhar_pc_02": {
+			"nome": "TRABALHAR_PC_02",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_04": "ON",
+				"PLUG_05": "ON",
+				"PLUG_06": "ON"
+			}
+		},
+		"Trabalhar_pc_03": {
+			"nome": "TRABALHAR_PC_03",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_07": "ON",
+				"PLUG_08": "ON",
+				"PLUG_09": "ON"
+			}
+		},
+		"Trabalhar_pc_04": {
+			"nome": "TRABALHAR_PC_04",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_10": "ON",
+				"PLUG_11": "ON",
+				"PLUG_12": "ON"
+			}
+		},
+		"Trabalhar_pc_05": {
+			"nome": "TRABALHAR_PC_05",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_13": "ON",
+				"PLUG_14": "ON",
+				"PLUG_15": "ON"
+			}
+		},
+		"Trabalhar_pc_06": {
+			"nome": "TRABALHAR_PC_06",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_16": "ON",
+				"PLUG_17": "ON",
+				"PLUG_18": "ON"
+			}
+		},
+		"Trabalhar_pc_07": {
+			"nome": "TRABALHAR_PC_07",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_19": "ON",
+				"PLUG_20": "ON",
+				"PLUG_21": "ON"
+			}
+		},
+		"Trabalhar_pc_08": {
+			"nome": "TRABALHAR_PC_08",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_22": "ON",
+				"PLUG_23": "ON",
+				"PLUG_24": "ON"
+			}
+		},
+		"Trabalhar_pc_09": {
+			"nome": "TRABALHAR_PC_09",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_25": "ON",
+				"PLUG_26": "ON",
+				"PLUG_27": "ON"
+			}
+		},
+		"Trabalhar_pc_10": {
+			"nome": "TRABALHAR_PC_10",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_28": "ON",
+				"PLUG_29": "ON",
+				"PLUG_30": "ON"
+			}
+		},
+		"Cafeteira": {
+			"nome": "CAFETERIRA",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 10,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_31": "ON"
+			}
+		},
+		"Televisao": {
+			"nome": "TELEVISAO",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_34": "ON"
+			}
+		},
+		"Microondas": {
+			"nome": "MICROONDAS",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 10,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"PLUG_33": "ON"
+			}
+		},
+		"Comer": {
+			"nome": "COMER",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 40,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+			}
+		},
+		"Sair_sala": {
+			"nome": "SAIR_SALA",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 8,
+			"taxa_erro": 0.0,
+			"local_atividade": "RUA",
+			"lista_atuadores_atividade": {
+			}
+		},
+		"Aspirador": {
+			"nome": "ASPIRADOR",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 40,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"ASPIRADOR_01": "ON"
+			}
+		},
+		"Fora": {
+			"nome": "FORA",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.03,
+			"local_atividade": "RUA",
+			"lista_atuadores_atividade": {
+			}
+		},
+		"Chegar": {
+			"nome": "CHEGAR",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 3,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+			}
+		},
+		"Lampada": {
+			"nome": "LAMPADA",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 1,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+				"INTERRUPOR": "ON"
+			}
+		},
+		"Fim_rotina": {
+			"nome": "FIM_ROTINA",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 3,
+			"taxa_erro": 0.0,
+			"local_atividade": "RUA",
+			"lista_atuadores_atividade": {
+			}
+		},
+		"Saindo": {
+			"nome": "SAINDO",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 1,
+			"taxa_erro": 0.0,
+			"local_atividade": "SALA",
+			"lista_atuadores_atividade": {
+			}
+		}
+	},
+	"USUARIOS": {
+		"Usuario_01": {
+			"nome": "Joselito",
+			"prioridade": 1,
+			"comodo_atual": "RUA",
+			"preferencia": {},
+			"rotina_semana": [
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "CAFETERIRA", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "CAFETERIRA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "TRABALHAR_PC_06", "SAIR_SALA", "TRABALHAR_PC_06", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"]
+			]
+			},
+		"Usuario_02": {
+			"nome": "Mayki",
+			"prioridade": 0,
+			"comodo_atual": "RUA",
+			"preferencia": {},
+			"rotina_semana": [
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "SAIR_SALA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "FORA", "FORA", "FORA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "SAIR_SALA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "SAIR_SALA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "SAIR_SALA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "SAIR_SALA", "TRABALHAR_PC_02", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "SAIR_SALA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "FORA", "FORA", "FORA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "SAIR_SALA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "SAIR_SALA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "SAIR_SALA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "SAIR_SALA", "TRABALHAR_PC_02", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "TRABALHAR_PC_02", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"]
+			]
+		},
+		"Usuario_03": {
+			"nome": "Diego",
+			"prioridade": 0,
+			"comodo_atual": "RUA",
+			"preferencia": {},
+			"rotina_semana": [
+				["FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "MICROONDAS", "COMER", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "CAFETERIRA", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "MICROONDAS", "COMER", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "MICROONDAS", "COMER", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "MICROONDAS", "COMER", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "TRABALHAR_PC_03", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"]
+			]
+		},
+		"Usuario_04": {
+			"nome": "Dhyego",
+			"prioridade": 0,
+			"comodo_atual": "RUA",
+			"preferencia": {},
+			"rotina_semana": [
+				["FORA", "FORA", "FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "MICROONDAS", "COMER", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "CAFETERIRA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "MICROONDAS", "COMER", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "MICROONDAS", "COMER", "TRABALHAR_PC_07", "SAIR_SALA", "TRABALHAR_PC_07", "TRABALHAR_PC_07", "TELEVISAO", "SAIR_SALA", "TRABALHAR_PC_07", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"]
+			]
+		},
+		"Usuario_05": {
+			"nome": "Denivan",
+			"prioridade": 0,
+			"comodo_atual": "RUA",
+			"preferencia": {},
+			"rotina_semana": [
+				["FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "CAFETERIRA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "FORA","FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "SAIR_SALA", "TRABALHAR_PC_05", "TRABALHAR_PC_05", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"]
+			]
+		},
+		"Usuario_06": {
+			"nome": "Eduardo",
+			"prioridade": 0,
+			"comodo_atual": "RUA",
+			"preferencia": {},
+			"rotina_semana": [
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "SAIR_SALA", "MICROONDAS", "COMER", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "SAIR_SALA", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "SAIR_SALA", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_04", "SAIR_SALA", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "SAIR_SALA","MICROONDAS", "COMER", "SAIR_SALA", "TRABALHAR_PC_04","TRABALHAR_PC_04", "TRABALHAR_PC_04", "SAIR_SALA", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_04", "SAIR_SALA", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "SAIR_SALA","MICROONDAS", "COMER", "SAIR_SALA", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "SAIR_SALA", "TRABALHAR_PC_04", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_04", "SAIR_SALA", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "SAIR_SALA","MICROONDAS", "COMER", "SAIR_SALA", "TRABALHAR_PC_04","TRABALHAR_PC_04", "TRABALHAR_PC_04", "SAIR_SALA", "CAFETERIRA", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "TRABALHAR_PC_04", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"]
+			]
+		},
+		"Usuario_07": {
+			"nome": "George",
+			"prioridade": 0,
+			"comodo_atual": "RUA",
+			"preferencia": {},
+			"rotina_semana": [
+				["FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "SAIR_SALA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "SAIR_SALA","MICROONDAS", "COMER", "SAIR_SALA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "SAIR_SALA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "SAIR_SALA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "SAIR_SALA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "SAIR_SALA","MICROONDAS", "COMER", "SAIR_SALA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "SAIR_SALA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "SAIR_SALA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "TRABALHAR_PC_09", "SAIR_SALA", "MICROONDAS", "COMER", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"]
+			]
+		},
+		"Usuario_09": {
+			"nome": "Denis",
+			"prioridade": 0,
+			"comodo_atual": "RUA",
+			"preferencia": {},
+			"rotina_semana": [
+				["FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "SAIR_SALA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "MICROONDAS", "COMER", "SAIR_SALA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "SAIR_SALA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "SAIR_SALA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "MICROONDAS", "COMER", "SAIR_SALA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "SAIR_SALA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "FORA", "CHEGAR", "LAMPADA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "SAIR_SALA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "MICROONDAS", "COMER", "SAIR_SALA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "SAIR_SALA", "TRABALHAR_PC_01", "TRABALHAR_PC_01", "LAMPADA", "SAINDO", "FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"],
+				["FIM_ROTINA"]
+			]
+		}
+	},
+	"AUTOMACAO": [
+		{
+			"nome": "inicia aspirador de po",
+			"inicio": {"hora": 21, "minuto": 30},
+			"duracao": 40,
+			"dia_semana": [0, 2, 4],
+			"comodo": "SALA",
+			"atuador": "ASPIRADOR"
+		}
+
+	]
+}
