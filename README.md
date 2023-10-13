@@ -1,6 +1,6 @@
 <div align="center">
 	<img src="https://github.com/SSEDG/SSEDG/blob/main/doc/img/logo_ssedg2.png?raw=true" alt="logo" width=400px>
-  	<h1>Simulador de Ambientes Inteligentes Compartilhados</h1>
+  	<h1>Shared Smart Environment Data Generator (SSEDG)</h1>
 </div>
 <div>
 	<p align="center">
