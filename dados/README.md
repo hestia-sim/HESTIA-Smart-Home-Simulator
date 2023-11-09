@@ -1,1 +1,0 @@
-### pasta para armazenar dados gerados

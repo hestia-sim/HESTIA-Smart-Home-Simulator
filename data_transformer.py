@@ -5,16 +5,8 @@ import os
 
 from datetime import datetime, time, timedelta
 
-initial_path = './dados/'
-datasets = [r for r in os.listdir(initial_path) if 'csv' in r and 'transformed' not in r]
+from menu import menu
 
-print('*' * 20 + 'DATA LIST' + '*' * 20)
-for i, dataset in enumerate(datasets):
-    print(f'({i+1}) - {dataset}')
-print('*' * 49)
-code = int(input('Selecione o dataset na lista acima: ')) - 1
-csv_path = datasets[code]
-df = pd.read_csv(initial_path + csv_path)
 
 def transform_data(dataframe: pd.DataFrame, device_column: str, device_state_column: str, group_column: str, time_column: str) -> pd.DataFrame:
     data = dataframe.copy() # Copiando dataframe para evitar modificação no dataframe externo
@@ -47,10 +39,31 @@ def transform_data(dataframe: pd.DataFrame, device_column: str, device_state_col
         progress = (count+1)/len(activity_datetimes)
         progress_bar = f'[{"#"*int((progress*30)) + "-"*int((1-progress)*30)}]'
         sys.stdout.write('\r'+f'Progress: {progress_bar} {count+1}/{len(activity_datetimes)} ({round(100*progress, 2)}%)')
-    sys.stdout.write('\n')
+    sys.stdout.write('\r')
+    sys.stdout.write('\r')
     return pd.DataFrame(historic)
 
 
-new_data = transform_data(dataframe=df, device_column='device', device_state_column='message',
-                          group_column='group', time_column='timeStamp')
-new_data.to_csv(initial_path + csv_path.split('.')[0] + '-transformed.' + csv_path.split('.')[1], index=0)
+def transform():
+    initial_path = './dados'
+    dirs = [dir for dir in os.listdir('/'.join([initial_path, 'original']))]
+    datasets = ['/'.join([str.lower(dir), dataset]) for dir in dirs for dataset in
+                os.listdir('/'.join([initial_path, 'original', dir]))] + ['Back']
+    max_size = max(len(option) for option in datasets)
+    title = '*' * (max_size // 2) + ' SELECT A DATASET TO TRANSFORM ' + '*' * (max_size // 2)
+    code = menu(datasets, title)
+    csv_path = datasets[code]
+    if csv_path != 'Back':
+        df = pd.read_csv('/'.join([initial_path, 'original', csv_path]))
+        csv_path = csv_path.split('/')[1]
+        if not 'transformed' in os.listdir(initial_path):
+            os.mkdir(initial_path + 'transformed')
+        initial_path = '/'.join([initial_path, 'transformed', csv_path.split('.')[0] + '.' + csv_path.split('.')[1]])
+
+        new_data = transform_data(dataframe=df, device_column='device', device_state_column='message',
+                                  group_column='group', time_column='timeStamp')
+        new_data.to_csv(initial_path, index=0)
+        print(f'Transformed data saved in {initial_path}')
+        return False
+    else:
+        return True
