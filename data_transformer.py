@@ -40,30 +40,30 @@ def transform_data(dataframe: pd.DataFrame, device_column: str, device_state_col
         progress_bar = f'[{"#"*int((progress*30)) + "-"*int((1-progress)*30)}]'
         sys.stdout.write('\r'+f'Progress: {progress_bar} {count+1}/{len(activity_datetimes)} ({round(100*progress, 2)}%)')
     sys.stdout.write('\r')
-    sys.stdout.write('\r')
     return pd.DataFrame(historic)
 
 
 def transform():
     initial_path = './dados'
-    dirs = [dir for dir in os.listdir('/'.join([initial_path, 'original']))]
+    dirs = ['/'.join(['original', i]) for i in os.listdir('/'.join([initial_path, 'original']))] +\
+                  ['multiple_routines']
     datasets = ['/'.join([str.lower(dir), dataset]) for dir in dirs for dataset in
-                os.listdir('/'.join([initial_path, 'original', dir]))] + ['Back']
+                os.listdir('/'.join([initial_path, dir]))] + ['Back']
     max_size = max(len(option) for option in datasets)
     title = '*' * (max_size // 2) + ' SELECT A DATASET TO TRANSFORM ' + '*' * (max_size // 2)
     code = menu(datasets, title)
     csv_path = datasets[code]
+
     if csv_path != 'Back':
-        df = pd.read_csv('/'.join([initial_path, 'original', csv_path]))
+        df = pd.read_csv('/'.join([initial_path, csv_path]))
         csv_path = csv_path.split('/')[1]
         if not 'transformed' in os.listdir(initial_path):
-            os.mkdir(initial_path + 'transformed')
-        initial_path = '/'.join([initial_path, 'transformed', csv_path.split('.')[0] + '.' + csv_path.split('.')[1]])
-
+            os.mkdir('/'.join([initial_path, 'transformed']))
+        final_path = '/'.join([initial_path, 'transformed', csv_path.split('.')[0] + '.' + csv_path.split('.')[1]])
         new_data = transform_data(dataframe=df, device_column='device', device_state_column='message',
                                   group_column='group', time_column='timeStamp')
-        new_data.to_csv(initial_path, index=0)
-        print(f'Transformed data saved in {initial_path}')
+        new_data.to_csv(final_path, index=0)
+        print(f'Transformed data saved in {final_path}')
         return False
     else:
         return True

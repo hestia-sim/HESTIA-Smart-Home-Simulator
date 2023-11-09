@@ -22,12 +22,12 @@ def inicia_simulacao(env, dias_simulados):
 def generate_data():
     initial_path = './dados'
 
-    tipos = ['Completo', 'Simples', 'Back']
+    tipos = ['completo', 'simples', 'back']
     max_size = max(len(option) for option in tipos)
     title = '*' * (max_size // 2) + ' SELECT THE TYPE ' + '*' * (max_size // 2)
-    modelo_dados = menu(tipos, title)
+    modelo_dados = menu(list(map(str.capitalize, tipos)), title)
     tipo_selecionado = tipos[modelo_dados]
-    if tipo_selecionado != 'Back':
+    if tipo_selecionado != 'back':
         dias_simulacao = int(input('Quantidade de dias: '))
 
         rotinas = [r.split('.')[0] for r in os.listdir('./rotinas/')]
