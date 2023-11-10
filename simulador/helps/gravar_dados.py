@@ -18,5 +18,7 @@ class GravarDados:
 
     @staticmethod
     def gravar(caminho_pasta: str):
-        __class__.dataFrame.to_csv(f"{caminho_pasta}/dados-{datetime.now().strftime('%d-%m-%Y_%H-%M-%S')}.csv", index=False)
+        nome_arquivo = f"dados-{datetime.now().strftime('%d-%m-%Y_%H-%M-%S')}.csv"
+        __class__.dataFrame.to_csv(f"{caminho_pasta}/{nome_arquivo}", index=False)
+        return nome_arquivo
 

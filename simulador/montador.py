@@ -18,31 +18,31 @@ from simulador.usuario import Usuario
 
 class Montador:
 
-    def monta_comodo(self, env: Environment, dados_comodos: dict, modelo_dados: int) -> dict[Comodo]:
+    def monta_comodo(self, env: Environment, dados_comodos: dict, tipo_selecionado: str) -> dict[Comodo]:
         comodos = dict()
         for comodo in dados_comodos.values():
-            comodo["atuadores"] = self.monta_atuador(env, comodo["nome"], comodo["atuadores"], modelo_dados)
+            comodo["atuadores"] = self.monta_atuador(env, comodo["nome"], comodo["atuadores"], tipo_selecionado)
             comodos[comodo["nome"]] = Comodo(env, **comodo)
         return comodos
 
-    def monta_atuador(self, env: Environment, nome_comodo: str, dados_atuadores: list, modelo_dados: int) -> list:
+    def monta_atuador(self, env: Environment, nome_comodo: str, dados_atuadores: list, tipo_selecionado: str) -> list:
         lista_atuadores = []
         for atuador in dados_atuadores:
             match atuador:
                 case "CAFETEIRA":
-                    lista_atuadores.append(CoffeeMachine(env, nome_comodo, atuador, modelo_dados, "atuador"))
+                    lista_atuadores.append(CoffeeMachine(env, nome_comodo, atuador, tipo_selecionado, "atuador"))
                 case "LAMPADA":
-                    lista_atuadores.append(LightBulbAction(env, nome_comodo, atuador, modelo_dados, "atuador"))
+                    lista_atuadores.append(LightBulbAction(env, nome_comodo, atuador, tipo_selecionado, "atuador"))
                 case "TV":
-                    lista_atuadores.append(Tv(env, nome_comodo, atuador, modelo_dados, "atuador"))
+                    lista_atuadores.append(Tv(env, nome_comodo, atuador, tipo_selecionado, "atuador"))
                 case "SOM":
-                    lista_atuadores.append(Sound(env, nome_comodo, atuador, modelo_dados, "atuador"))
+                    lista_atuadores.append(Sound(env, nome_comodo, atuador, tipo_selecionado, "atuador"))
                 case "AR_CONDICIONADO":
-                    lista_atuadores.append(SplitAir(env, nome_comodo, atuador, modelo_dados, "atuador"))
+                    lista_atuadores.append(SplitAir(env, nome_comodo, atuador, tipo_selecionado, "atuador"))
                 case "SENSOR_PRESENCA":
-                    lista_atuadores.append(MovimentSensorAction(env, nome_comodo, atuador, modelo_dados, "sensor"))
+                    lista_atuadores.append(MovimentSensorAction(env, nome_comodo, atuador, tipo_selecionado, "sensor"))
                 case _:
-                    lista_atuadores.append(Plug(env, nome_comodo, atuador, modelo_dados, "atuador"))
+                    lista_atuadores.append(Plug(env, nome_comodo, atuador, tipo_selecionado, "atuador"))
         return lista_atuadores
 
     def cria_grafo(self, relacao_nos: dict, comodos: dict) -> Graph:

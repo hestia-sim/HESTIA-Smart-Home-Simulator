@@ -6,8 +6,8 @@ from simulador.usuario import Usuario
 
 
 class Sound(DeviceBase):
-    def __init__(self, env, nome_comodo, tipo, modelo_dados: int, tipoEnv):
-        super().__init__(env, nome_comodo, tipo, modelo_dados, tipoEnv)
+    def __init__(self, env, nome_comodo, tipo, tipo_selecionado: str, tipoEnv):
+        super().__init__(env, nome_comodo, tipo, tipo_selecionado, tipoEnv)
         self.productKey = "9d8s6gfd7fgsd7f9798ds87g"
         self.switch = Status.OFF
         self.sound_volume = 20
@@ -38,7 +38,7 @@ class Sound(DeviceBase):
         return value
 
     def _mensagem(self, usuario: Usuario) -> None:
-        if self.modelo_dados == 1:
+        if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {
                     "code": "switch",

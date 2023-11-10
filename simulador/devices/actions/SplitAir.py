@@ -6,8 +6,8 @@ from simulador.usuario import Usuario
 
 
 class SplitAir(DeviceBase):
-    def __init__(self, env, nome_comodo, tipo, modelo_dados: int, tipoEnv):
-        super().__init__(env, nome_comodo, tipo, modelo_dados, tipoEnv)
+    def __init__(self, env, nome_comodo, tipo, tipo_selecionado: str, tipoEnv):
+        super().__init__(env, nome_comodo, tipo, tipo_selecionado, tipoEnv)
         self.productKey = "s45f3s6f890sdfs876f8sd7d"
         self.switch = Status.OFF
         self.temp_set = 23
@@ -45,7 +45,7 @@ class SplitAir(DeviceBase):
         self._mensagem(usuario_action)
 
     def _mensagem(self, usuario: Usuario):
-        if self.modelo_dados == 1:
+        if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {
                     "code": "switch",

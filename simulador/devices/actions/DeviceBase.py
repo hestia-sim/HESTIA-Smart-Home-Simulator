@@ -10,9 +10,9 @@ from simulador.usuario import Usuario
 class DeviceBase(ABC):
     _contador_instancias = 0
 
-    def __init__(self, env, nome_comodo, tipo, modelo_dados: int, tipoEnv: str):
+    def __init__(self, env, nome_comodo, tipo, tipo_selecionado: str, tipoEnv: str):
         __class__._contador_instancias += 1
-        self.modelo_dados = modelo_dados
+        self.tipo_selecionado = tipo_selecionado
         self.env = env
         self.resource = simpy.Resource(env)
         self.tipo = tipo

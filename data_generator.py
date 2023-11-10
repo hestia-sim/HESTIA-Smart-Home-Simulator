@@ -13,11 +13,13 @@ from simulador.montador import Montador
 
 
 def inicia_simulacao(env, dias_simulados):
-    data = Tempo.data_inicio_simulacao(dias_simulados)
-    print(f'data inicio simulação: {data}')
+    Tempo.data_inicio_simulacao(dias_simulados)
     env.run(until=Converter.dias_para_segundos(dias_simulados))
-    print(f'data final simulação: {Tempo.data_atual_simulacao(env)}')
 
+def print_infos(env, dias_simulados, rotina, nome_arquivo):
+    data_inicio = Tempo.data_inicio
+    data_final = Tempo.data_atual_simulacao(env)
+    print(f"--- Dados Simulação --- \nDias: {dias_simulados}\nPeríodo: {data_inicio} à {data_final}\nRotina: {rotina}\nArquivo Gerado: {nome_arquivo}")
 
 def generate_data():
     initial_path = './dados'
@@ -27,6 +29,7 @@ def generate_data():
     title = '*' * (max_size // 2) + ' SELECT THE TYPE ' + '*' * (max_size // 2)
     modelo_dados = menu(list(map(str.capitalize, tipos)), title)
     tipo_selecionado = tipos[modelo_dados]
+    print(tipo_selecionado)
     if tipo_selecionado != 'back':
         dias_simulacao = int(input('Quantidade de dias: '))
 
@@ -54,7 +57,7 @@ def generate_data():
 
             env = simpy.Environment()
             montador = Montador()
-            comodos_da_casa = montador.monta_comodo(env, dados["COMODOS"], modelo_dados)
+            comodos_da_casa = montador.monta_comodo(env, dados["COMODOS"], tipo_selecionado)
             grafo_comodos = montador.cria_grafo(dados["GRAFO_COMODOS"], comodos_da_casa)
             atividades = montador.monta_atividade(env, comodos_da_casa, dados["ATIVIDADES"])
             usuarios = montador.monta_usuario(env, dados["USUARIOS"])
@@ -66,7 +69,10 @@ def generate_data():
             ############################### INICIA APLICAÇÃO ###############################
             UsuariosHelp(usuarios)
             inicia_simulacao(env, dias_simulacao)
-            GravarDados.gravar(initial_path)
+            nome_arquivo = GravarDados.gravar(initial_path)
+
+            print_infos(env, dias_simulacao, rotinas[rotina_selecionada], nome_arquivo)
+
         return False
     else:
         sys.stdout.write('\r')

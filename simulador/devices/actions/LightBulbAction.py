@@ -7,8 +7,8 @@ from simulador.usuario import Usuario
 
 class LightBulbAction(DeviceBase):
 
-    def __init__(self, env, nome_comodo, tipo, modelo_dados: int, tipoEnv):
-        super().__init__(env, nome_comodo, tipo, modelo_dados, tipoEnv)
+    def __init__(self, env, nome_comodo, tipo, tipo_selecionado: str, tipoEnv):
+        super().__init__(env, nome_comodo, tipo, tipo_selecionado, tipoEnv)
         self.productKey = "435a6fsdfsdfs879s9fs7"
         self.switch_led = Status.OFF
         self.bright_value_v2 = 1000
@@ -45,7 +45,7 @@ class LightBulbAction(DeviceBase):
         return value
 
     def _mensagem(self, usuario: Usuario) -> None:
-        if self.modelo_dados == 1:
+        if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {
                     "code": "switch_led",

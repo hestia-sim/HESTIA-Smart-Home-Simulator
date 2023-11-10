@@ -6,8 +6,8 @@ from simulador.usuario import Usuario
 
 
 class Plug(DeviceBase):
-    def __init__(self, env, nome_comodo, tipo, modelo_dados: int, tipoEnv):
-        super().__init__(env, nome_comodo, tipo, modelo_dados, tipoEnv)
+    def __init__(self, env, nome_comodo, tipo, tipo_selecionado: str, tipoEnv):
+        super().__init__(env, nome_comodo, tipo, tipo_selecionado, tipoEnv)
         self.productKey = "3s2d1f0sdf1sdf18s79sddf"
         self.switch_1 = Status.OFF
 
@@ -26,7 +26,7 @@ class Plug(DeviceBase):
 
 
     def _mensagem(self, usuario: Usuario) -> None:
-        if self.modelo_dados == 1:
+        if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {
                     "code": "switch_1",

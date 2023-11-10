@@ -5,8 +5,8 @@ from simulador.helps.tempo import Tempo
 from simulador.usuario import Usuario
 
 class MovimentSensorAction(SensorBase):
-    def __init__(self, env, nome_comodo, tipo, modelo_dados: int, tipoEnv):
-        super().__init__(env, nome_comodo, tipo, modelo_dados, tipoEnv)
+    def __init__(self, env, nome_comodo, tipo, tipo_selecionado: str, tipoEnv):
+        super().__init__(env, nome_comodo, tipo, tipo_selecionado, tipoEnv)
         self.productKey = "0s9d8f9s0d8f0s9df8s0f8"
         self.presence_state = Status.OFF
         self.human_motion_state = HumanMotion.NONE
@@ -23,7 +23,7 @@ class MovimentSensorAction(SensorBase):
         return self.presence_state == Status.ON
 
     def _mensagem(self, usuario: Usuario) -> None:
-        if self.modelo_dados == 1:
+        if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {
                     "code": "presence_state",
