@@ -56,10 +56,10 @@ def transform():
 
     if csv_path != 'Back':
         df = pd.read_csv('/'.join([initial_path, csv_path]))
-        csv_path = csv_path.split('/')[1]
+        csv_path = csv_path.split('/')[-1]
         if not 'transformed' in os.listdir(initial_path):
             os.mkdir('/'.join([initial_path, 'transformed']))
-        final_path = '/'.join([initial_path, 'transformed', csv_path.split('.')[0] + '.' + csv_path.split('.')[1]])
+        final_path = '/'.join([initial_path, 'transformed', csv_path])
         new_data = transform_data(dataframe=df, device_column='device', device_state_column='message',
                                   group_column='group', time_column='timeStamp')
         new_data.to_csv(final_path, index=0)
