@@ -55,7 +55,7 @@ class Comodo:
                     for u in usuarios_comodo:
                         if u == usuario_action:
                             continue
-                        if u.atividade_atual.lista_atuadores_atividade[tipo_atuador] == Status.ON:
+                        if tipo_atuador in u.atividade_atual.lista_atuadores_atividade and u.atividade_atual.lista_atuadores_atividade[tipo_atuador] == Status.ON:
                             desativa = False
 
                 if desativa:
