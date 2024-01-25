@@ -45,8 +45,14 @@ def transform_data(dataframe: pd.DataFrame, device_column: str, device_state_col
 
 def transform():
     initial_path = './dados'
+    if not 'multiple_routines' in os.listdir(initial_path):
+        os.mkdir('/'.join([initial_path, 'multiple_routines']))
+    if not 'original' in os.listdir(initial_path):
+        os.mkdir('/'.join([initial_path, 'original']))
+
     dirs = ['/'.join(['original', i]) for i in os.listdir('/'.join([initial_path, 'original']))] +\
                   ['multiple_routines']
+
     datasets = ['/'.join([str.lower(dir), dataset]) for dir in dirs for dataset in
                 os.listdir('/'.join([initial_path, dir]))] + ['Back']
     max_size = max(len(option) for option in datasets)
