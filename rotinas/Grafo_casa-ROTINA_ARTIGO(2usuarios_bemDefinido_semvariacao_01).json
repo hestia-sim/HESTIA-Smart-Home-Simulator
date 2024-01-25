@@ -72,8 +72,8 @@
 	"ATIVIDADES": {
 		"Dormir_quarto_01": {
 			"nome": "DORMIR_QUARTO_01",
-			"inicio_ocorrencia": "23:00:01",
-			"fim_ocorrencia": "00:00:00",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
 			"duracao": 30,
 			"taxa_erro": 0.01,
 			"local_atividade": "QUARTO_01",
@@ -85,8 +85,8 @@
 		},
 		"Acordar_quarto_01": {
 			"nome": "ACORDAR_QUARTO_01",
-			"inicio_ocorrencia": "00:00:01",
-			"fim_ocorrencia": "07:00:00",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
 			"duracao": 420,
 			"taxa_erro": 0.01,
 			"local_atividade": "QUARTO_01",
@@ -98,8 +98,8 @@
 		},
 		"Dormir_quarto_02": {
 			"nome": "DORMIR_QUARTO_02",
-			"inicio_ocorrencia": "23:00:01",
-			"fim_ocorrencia": "00:00:00",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
 			"duracao": 30,
 			"taxa_erro": 0.0,
 			"local_atividade": "QUARTO_02",
@@ -111,8 +111,8 @@
 		},
 		"Acordar_quarto_02": {
 			"nome": "ACORDAR_QUARTO_02",
-			"inicio_ocorrencia": "00:00:01",
-			"fim_ocorrencia": "07:00:00",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
 			"duracao": 420,
 			"taxa_erro": 0.0,
 			"local_atividade": "QUARTO_02",
@@ -124,8 +124,8 @@
 		},
 		"Fazer_nada": {
 			"nome": "FAZER_NADA",
-			"inicio_ocorrencia": "00:00:01",
-			"fim_ocorrencia": "07:00:00",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
 			"duracao": 30,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
