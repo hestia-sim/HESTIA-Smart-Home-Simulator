@@ -40,20 +40,17 @@ def transform_data(dataframe: pd.DataFrame, device_column: str, device_state_col
         progress_bar = f'[{"#"*int((progress*30)) + "-"*int((1-progress)*30)}]'
         sys.stdout.write('\r'+f'Progress: {progress_bar} {count+1}/{len(activity_datetimes)} ({round(100*progress, 2)}%)')
     sys.stdout.write('\r')
-    return pd.DataFrame(historic)
+    output = pd.DataFrame(historic)
+    output = output[((output != output.shift()).sum(axis=1) > 1)].reset_index(drop=True)
+    return output
 
 
 def transform():
     initial_path = './dados'
-    if not 'multiple_routines' in os.listdir(initial_path):
-        os.mkdir('/'.join([initial_path, 'multiple_routines']))
-    if not 'original' in os.listdir(initial_path):
-        os.mkdir('/'.join([initial_path, 'original']))
-
     dirs = ['/'.join(['original', i]) for i in os.listdir('/'.join([initial_path, 'original']))] +\
-                  ['multiple_routines']
+                  ['multiple_routines', 'merged_routines']
 
-    datasets = ['/'.join([str.lower(dir), dataset]) for dir in dirs for dataset in
+    datasets = ['/'.join([str.lower(dir), dataset]) for dir in dirs if dir.split('/')[0] in os.listdir(initial_path) for dataset in
                 os.listdir('/'.join([initial_path, dir]))] + ['Back']
     max_size = max(len(option) for option in datasets)
     title = '*' * (max_size // 2) + ' SELECT A DATASET TO TRANSFORM ' + '*' * (max_size // 2)
