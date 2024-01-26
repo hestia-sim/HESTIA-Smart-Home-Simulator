@@ -88,7 +88,7 @@
 			"inicio_ocorrencia": null,
 			"fim_ocorrencia": null,
 			"duracao": 420,
-			"taxa_erro": 0.01,
+			"taxa_erro": 0.05,
 			"local_atividade": "QUARTO_01",
 			"lista_atuadores_atividade": {
 				"LAMPADA": "OFF",
@@ -503,20 +503,20 @@
 			"preferencia": {
 				"QUARTO_01": {
 					"AR_CONDICIONADO": {"switch":  "ON", "temp_set":  27, "mode":  "AUTO"},
-					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  600, "temp_value_v2":  600}
+					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  700, "temp_value_v2":  600}
 				},
 				"QUARTO_02": {
 					"AR_CONDICIONADO": {"switch":  "ON", "temp_set":  27, "mode":  "AUTO"},
 					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  600, "temp_value_v2":  600}
 				},
 				"SALA":  {
-					"AR_CONDICIONADO": {"switch":  "ON", "temp_set":  27, "mode":  "AUTO"},
-					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  600, "temp_value_v2":  600},
+					"AR_CONDICIONADO": {"switch":  "ON", "temp_set":  22, "mode":  "AUTO"},
+					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  800, "temp_value_v2":  600},
 					"TV": {"switch":  "ON", "sound_volume":  40}
 				},
 				"ESCRITORIO": {
-					"AR_CONDICIONADO": {"switch":  "ON", "temp_set":  27, "mode":  "AUTO"},
-					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  600, "temp_value_v2":  600}
+					"AR_CONDICIONADO": {"switch":  "ON", "temp_set":  26, "mode":  "AUTO"},
+					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  1000, "temp_value_v2":  600}
 				}
 			},
 			"rotina_semana": [
@@ -536,15 +536,15 @@
 			"preferencia": {
 				"QUARTO_01": {
 					"AR_CONDICIONADO": {"switch":  "ON", "temp_set":  22, "mode":  "WIND"},
-					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  900, "temp_value_v2":  600}
+					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  900, "temp_value_v2":  500}
 				},
 				"QUARTO_02": {
-					"AR_CONDICIONADO": {"switch":  "ON", "temp_set":  22, "mode":  "WIND"},
-					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  900, "temp_value_v2":  600}
+					"AR_CONDICIONADO": {"switch":  "ON", "temp_set":  24, "mode":  "WIND"},
+					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  700, "temp_value_v2":  600}
 				},
 				"SALA":  {
 					"AR_CONDICIONADO": {"switch":  "ON", "temp_set":  22, "mode":  "WIND"},
-					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  900, "temp_value_v2":  600},
+					"LAMPADA": {"switch_led": "ON", "bright_value_v2":  1000, "temp_value_v2":  600},
 					"TV": {"switch":  "ON", "sound_volume":  20}
 				}
 			},
