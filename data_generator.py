@@ -60,7 +60,7 @@ def generate_data():
             comodos_da_casa = montador.monta_comodo(env, dados["COMODOS"], tipo_selecionado)
             grafo_comodos = montador.cria_grafo(dados["GRAFO_COMODOS"], comodos_da_casa)
             atividades = montador.monta_atividade(env, comodos_da_casa, dados["ATIVIDADES"])
-            usuarios = montador.monta_usuario(env, dados["USUARIOS"])
+            usuarios = montador.monta_usuario(env, dados["USUARIOS"], comodos_da_casa)
             automacao = montador.monta_automacao(env, comodos_da_casa, dados["AUTOMACAO"])
             # nx.draw(grafo_comodos, with_labels=True)
             montador.relaciona_atividades_e_usuario(atividades, usuarios)
@@ -77,3 +77,50 @@ def generate_data():
     else:
         sys.stdout.write('\r')
         return True
+
+
+def generate_data_debug(tipo_selecionado, dias_simulacao, nome_rotina):
+    initial_path = './dados'
+    print(tipo_selecionado)
+    arquivo_rotina = f'./rotinas/{nome_rotina}.json'
+
+    if not 'dados' in os.listdir():
+        os.mkdir('dados')
+
+    if not 'original' in os.listdir(initial_path):
+        os.mkdir('/'.join([initial_path, 'original']))
+
+    initial_path += '/original/'
+    if not tipo_selecionado in os.listdir(initial_path):
+        os.mkdir('/'.join([initial_path, tipo_selecionado]))
+    initial_path += tipo_selecionado
+
+    with open(arquivo_rotina) as json_file:
+        ############################### INSTANCIA ELEMENTOS ###############################
+        dados = json.load(json_file)
+
+        env = simpy.Environment()
+        montador = Montador()
+        comodos_da_casa = montador.monta_comodo(env, dados["COMODOS"], tipo_selecionado)
+        grafo_comodos = montador.cria_grafo(dados["GRAFO_COMODOS"], comodos_da_casa)
+        atividades = montador.monta_atividade(env, comodos_da_casa, dados["ATIVIDADES"])
+        usuarios = montador.monta_usuario(env, dados["USUARIOS"], comodos_da_casa)
+        automacao = montador.monta_automacao(env, comodos_da_casa, dados["AUTOMACAO"])
+        # nx.draw(grafo_comodos, with_labels=True)
+        montador.relaciona_atividades_e_usuario(atividades, usuarios)
+        montador.inicializa_processos(env, usuarios, grafo_comodos, automacao)
+
+        ############################### INICIA APLICAÇÃO ###############################
+        UsuariosHelp(usuarios)
+        inicia_simulacao(env, dias_simulacao)
+        nome_arquivo = GravarDados.gravar(initial_path)
+
+        print_infos(env, dias_simulacao, nome_rotina, nome_arquivo)
+
+
+if __name__ == "__main__":
+    tipos = ['completo', 'simples', 'back']
+    dias_simulacao = 30
+    nome_rotina = "Cenario_argus(1usuario)"
+
+    generate_data_debug(tipos[0], dias_simulacao, nome_rotina)

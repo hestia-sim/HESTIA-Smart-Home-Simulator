@@ -26,9 +26,11 @@ class Usuario:
             atividade = self._define_periodo_atividade()
             self.atividade_atual = atividade
 
-
+            if self.comodo_atual != atividade.local_atividade.nome:
+                self.comodo_atual.desativa_sensor(self)
             yield self.env.process(self.rota_ate(grafo_casa, self.comodo_atual, atividade.local_atividade.nome))
             self.comodo_atual = atividade.local_atividade
+            # self.comodo_atual.ativa_sensor(self)
             yield self.env.process(atividade.executar(self, atividade.local_atividade))
 
     def _define_periodo_atividade(self):
@@ -49,6 +51,9 @@ class Usuario:
 
         atividade.variacao = int(uniform(0, atividade.duracao * atividade.taxa_erro))
         return atividade
+
+    def proxima_atividade(self):
+        atividade = self.rotina_semana[Tempo.dia_da_semana(self.env)][self.contador_evento]
 
     def contador_index_evento(self):
         semana_atual = Tempo.dia_da_semana(self.env)

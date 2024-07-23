@@ -59,8 +59,12 @@ class Montador:
             listaAtividades.append(Atividade(env, **atividade))
         return listaAtividades
 
-    def monta_usuario(self, env: Environment, lista_usuarios: dict) -> list[Usuario]:
-        return [Usuario(env, **u) for u in lista_usuarios.values()]
+    def monta_usuario(self, env: Environment, lista_usuarios: dict, comodos_da_casa: dict[Comodo]) -> list[Usuario]:
+        listaUsuarios = []
+        for u in lista_usuarios.values():
+            u["comodo_atual"] = comodos_da_casa[u["comodo_atual"]]
+            listaUsuarios.append(Usuario(env, **u))
+        return listaUsuarios
 
     def monta_automacao(self, env: Environment, lista_comodos: dict, lista_automacao: dict) -> list[Automacao]:
         return [Automacao(env, lista_comodos, **a) for a in lista_automacao]

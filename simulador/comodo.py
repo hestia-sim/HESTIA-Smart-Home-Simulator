@@ -1,3 +1,4 @@
+import random
 from datetime import timedelta
 
 import simpy
@@ -22,13 +23,13 @@ class Comodo:
         with self.resource.request() as rq:
             yield rq
             usuario_action.comodo_atual = local_atividade
-            self._ativa_sensor(usuario_action, rq)
+            self.ativa_sensor(usuario_action)
 
             yield from self.inicia_atuadores(lista_atuadores_atividade, usuario_action)
             yield self.env.timeout(duracao)
             yield from self.finaliza_atuadores(lista_atuadores_atividade, usuario_action)
 
-            self._desativa_sensor(usuario_action, rq)
+            # self._desativa_sensor(usuario_action)
 
     def usuario_prioritario(self) -> Usuario:
         lista_usuarios_no_comodo = UsuariosHelp.usuarios_in_comodo(self.nome)
@@ -44,6 +45,7 @@ class Comodo:
             return
 
         for tipo_atuador in lista_atuadores_atividade:
+            yield self.env.timeout(random.randint(5, 30)) #tempo entre a ativação dos dispositivos.
             if tipo_atuador in self.atuadores:
                 atuador = self.atuadores[self.atuadores.index(tipo_atuador)]
                 if not atuador.is_ligado():
@@ -61,7 +63,7 @@ class Comodo:
                 if desativa:
                     with atuador.resource.request() as rq3:
                         yield rq3
-                        yield self.env.timeout(5)
+                        yield self.env.timeout(random.randint(5, 30))
                         atuador.finalizar_uso(usuario_action)
 
     def inicia_atuadores(self, lista_atuadores_atividade, usuario_action: Usuario):
@@ -107,20 +109,21 @@ class Comodo:
     def passar(self, usuario: Usuario):
         with self.resource.request() as rq:
             yield rq
-            self._ativa_sensor(usuario, rq)
-            yield self.env.timeout(20)
-            self._desativa_sensor(usuario, rq)
+            self.ativa_sensor(usuario)
+            yield self.env.timeout(random.randint(5, 15))
+            self.desativa_sensor(usuario)
 
-    def _ativa_sensor(self, usuario_action, rq):
-        if rq.resource.count > 1 or self.nome == "RUA":
+    def ativa_sensor(self, usuario_action):
+        if len(UsuariosHelp.name_usuarios_in_comodo(self.nome)) > 1 or self.nome == "RUA":
             return
 
         if "SENSOR_PRESENCA" in self.atuadores:
             atuador_atual = self.atuadores[self.atuadores.index("SENSOR_PRESENCA")]
-            atuador_atual.iniciar_uso(usuario_action)
+            if atuador_atual.presence_state == Status.OFF:
+                atuador_atual.iniciar_uso(usuario_action)
 
-    def _desativa_sensor(self, usuario_action, rq):
-        if rq.resource.count > 1 or self.nome == "RUA":
+    def desativa_sensor(self, usuario_action):
+        if len(UsuariosHelp.name_usuarios_in_comodo(self.nome)) > 1 or self.nome == "RUA":
             return
 
         if "SENSOR_PRESENCA" in self.atuadores:
