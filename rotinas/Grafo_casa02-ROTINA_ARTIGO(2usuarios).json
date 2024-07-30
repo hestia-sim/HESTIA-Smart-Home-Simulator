@@ -75,7 +75,7 @@
 			"inicio_ocorrencia": "23:00:01",
 			"fim_ocorrencia": "00:00:00",
 			"duracao": 30,
-			"taxa_erro": 0.01,
+			"taxa_erro": 0.0,
 			"local_atividade": "QUARTO_01",
 			"lista_atuadores_atividade": {
 				"LAMPADA": "OFF",
@@ -88,7 +88,7 @@
 			"inicio_ocorrencia": "00:00:01",
 			"fim_ocorrencia": "07:00:00",
 			"duracao": 420,
-			"taxa_erro": 0.01,
+			"taxa_erro": 0.0,
 			"local_atividade": "QUARTO_01",
 			"lista_atuadores_atividade": {
 				"LAMPADA": "OFF",
@@ -140,7 +140,7 @@
 			"inicio_ocorrencia": "07:00:01",
 			"fim_ocorrencia": "07:05:00",
 			"duracao": 5,
-			"taxa_erro": 0.01,
+			"taxa_erro": 0.0,
 			"local_atividade": "BANHEIRO_01",
 			"lista_atuadores_atividade": {
 				"LAMPADA": "ON"

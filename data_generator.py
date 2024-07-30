@@ -121,6 +121,6 @@ def generate_data_debug(tipo_selecionado, dias_simulacao, nome_rotina):
 if __name__ == "__main__":
     tipos = ['completo', 'simples', 'back']
     dias_simulacao = 30
-    nome_rotina = "Cenario_argus(1usuario)"
+    nome_rotina = "Grafo_teste-grupo(1usuarios_sem_variacao)"
 
     generate_data_debug(tipos[0], dias_simulacao, nome_rotina)

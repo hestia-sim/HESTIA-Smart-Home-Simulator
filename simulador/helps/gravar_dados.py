@@ -1,3 +1,4 @@
+import re
 from datetime import datetime
 
 import pandas as pd
@@ -21,4 +22,40 @@ class GravarDados:
         nome_arquivo = f"dados-{datetime.now().strftime('%d-%m-%Y_%H-%M-%S')}.csv"
         __class__.dataFrame.to_csv(f"{caminho_pasta}/{nome_arquivo}", index=False)
         return nome_arquivo
+
+
+    @staticmethod
+    def debug_duplicidade():
+        def remove_message_timestamp(message):
+            regex = r"'t': \d+\.\d+, "
+            new_message = re.sub(regex, '', str(message))
+            return new_message
+
+        df = __class__.dataFrame.copy()
+        df['message'] = df['message'].apply(remove_message_timestamp)
+
+        unique_devices = df['device'].unique()
+
+        for device in unique_devices:
+            result = (df[df['device'] == device]['message'].shift(1) == df[df['device'] == device]['message']).sum()
+
+
+        duplicated_dict = {}
+        for device in unique_devices:
+            result = df[df['device'] == device].reset_index()[(df[df['device'] == device]['message'].shift(1) == df[df['device'] == device]['message']).values].index.tolist()
+            if len(result) > 0:
+                duplicated_dict[device] = result
+
+
+        duplicated_df = pd.DataFrame()
+        for device in duplicated_dict.keys():
+            for index in duplicated_dict[device]:
+                duplicated_df = pd.concat([duplicated_df, df[df['device'] == device].iloc[index-1:index+1]])
+
+        if len(duplicated_df) >= 2:
+            print("duplicado")
+
+
+
+
 

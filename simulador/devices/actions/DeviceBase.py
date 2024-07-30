@@ -20,6 +20,7 @@ class DeviceBase(ABC):
         self.device = f'{nome_comodo}_{tipo}-{__class__._contador_instancias:03}'
         self.devId = f"disp{hashlib.md5(self.device.encode()).hexdigest()}"
         self.nome_comodo = nome_comodo
+        self.mensagem_anteior = ""
 
     def __str__(self) -> str:
         return self.device
@@ -44,6 +45,17 @@ class DeviceBase(ABC):
         self._desligar()
         self._mensagem(usuario_action)
 
+    def compara_message(self, message: dict):
+        for dicionario in message["status"]:
+            dicionario.pop("t", None)
+        message = str(message)
+
+        if message != self.mensagem_anteior:
+            self.mensagem_anteior = str(message)
+            return True
+        else:
+            return False
+
     @abstractmethod
     def is_ligado(self) -> bool:
         pass
@@ -67,3 +79,5 @@ class DeviceBase(ABC):
     @abstractmethod
     def mudar(self, **kwargs):
         pass
+
+
