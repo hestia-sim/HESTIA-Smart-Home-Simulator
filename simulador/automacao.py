@@ -23,7 +23,7 @@ class Automacao:
     def gerar_evento(self, usuario_automacao: Usuario):
         while True:
             yield self.env.timeout(1)
-            semana_atual = Tempo.dia_da_semana(self.env)
+            semana_atual = Tempo.dia_da_semana(self.env.now)
             horario_atual = Tempo.hora_atual_simulacao(self.env)
             if semana_atual in self.dia_semana and horario_atual == self.horario_ativacao:
                 c = self.comodos[self.comodo]

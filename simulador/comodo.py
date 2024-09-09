@@ -1,3 +1,4 @@
+import copy
 import random
 from datetime import timedelta
 
@@ -5,8 +6,10 @@ import simpy
 
 from simulador.helps.status import Status
 from simulador.helps.tempo import Tempo
-from simulador.helps.usuarios_help import UsuariosHelp
+
 from simulador.usuario import Usuario
+
+from simulador.helps.usuarios_help import UsuariosHelp
 
 
 class Comodo:
@@ -19,15 +22,67 @@ class Comodo:
     def add_atuador(self, atuador):
         self.atuadores.append(atuador)
 
-    def entrar(self, duracao, usuario_action, lista_atuadores_atividade, local_atividade):
+    def entrar(self, atividade_original, duracao, usuario_action: Usuario, lista_atuadores_atividade, local_atividade, atividades_associadas=None):
         with self.resource.request() as rq:
             yield rq
             usuario_action.comodo_atual = local_atividade
             self.ativa_sensor(usuario_action)
 
+
+
             yield from self.inicia_atuadores(lista_atuadores_atividade, usuario_action)
-            yield self.env.timeout(duracao)
-            yield from self.finaliza_atuadores(lista_atuadores_atividade, usuario_action)
+            ######inicio logica
+            if duracao > 600 and atividades_associadas is not None:
+                quantidade_blocos = int(duracao/600) #divide em blocos de 10 minutos
+                resto_duracao = duracao % 600
+
+                for b in range(quantidade_blocos):
+                    atividade_para_sorteio = [None] + list(atividades_associadas.keys())
+                    probabilidades = [(1-sum(list(atividades_associadas.values())))] + list(atividades_associadas.values())
+                    atividade_sorteada = random.choices(atividade_para_sorteio, weights=probabilidades, k=1)[0]
+                    if atividade_sorteada is not None:
+                        atividade_secundaria = UsuariosHelp.pega_atividade(atividade_sorteada)
+                        atividade_secundaria.duracao = 600
+                        # self.desativa_sensor(usuario_action)
+                        if usuario_action.comodo_atual != atividade_secundaria.local_atividade:
+                            usuario_action.comodo_atual.desativa_sensor(usuario_action)
+                        yield self.env.process(usuario_action.atividade_secundaria(UsuariosHelp.grafo_comodos,atividade_secundaria, local_atividade, atividade_original))
+                        self.ativa_sensor(usuario_action)
+                    else:
+                        yield self.env.timeout(600)
+                yield self.env.timeout(resto_duracao)
+            else:
+                yield self.env.timeout(duracao)
+
+            ######fim logica
+
+
+            proxima_atividade = usuario_action.proxima_atividade()
+            atuadores_para_desligar = copy.copy(lista_atuadores_atividade)
+            atual = copy.copy(lista_atuadores_atividade)
+            proximo = copy.copy(proxima_atividade.lista_atuadores_atividade)
+            if proxima_atividade.local_atividade == atividade_original.local_atividade and atual is not None and proximo is not None:
+                conjunto_atual = set()
+                conjunto_proximo = set()
+                for k, v in proximo.items():
+                    conjunto_proximo.add(f"{k}:{v}")
+
+
+                for k, v in atual.items():
+                    conjunto_atual.add(f"{k}:{v}")
+
+                itens = conjunto_atual.intersection(conjunto_proximo)
+                apagar = [i.split(":")[0] for i in itens]
+
+                for i in apagar:
+                    atuadores_para_desligar.pop(i)
+
+
+            yield from self.finaliza_atuadores(atuadores_para_desligar, usuario_action)
+
+            if usuario_action.comodo_atual != proxima_atividade.local_atividade:
+                usuario_action.comodo_atual.desativa_sensor(usuario_action)
+
 
             # self._desativa_sensor(usuario_action)
 

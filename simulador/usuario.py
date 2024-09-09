@@ -3,9 +3,12 @@ from datetime import datetime
 from random import uniform
 
 import networkx as nx
+from networkx import Graph
+
 
 from simulador.helps.tempo import Tempo
 
+from simulador.atividade import Atividade
 
 class Usuario:
 
@@ -26,18 +29,34 @@ class Usuario:
             atividade = self._define_periodo_atividade()
             self.atividade_atual = atividade
 
-            if self.comodo_atual != atividade.local_atividade.nome:
-                self.comodo_atual.desativa_sensor(self)
+            # if self.comodo_atual != atividade.local_atividade:
+            #     self.comodo_atual.desativa_sensor(self)
             yield self.env.process(self.rota_ate(grafo_casa, self.comodo_atual, atividade.local_atividade.nome))
             self.comodo_atual = atividade.local_atividade
             # self.comodo_atual.ativa_sensor(self)
             yield self.env.process(atividade.executar(self, atividade.local_atividade))
 
+    def atividade_secundaria(self, grafo_casa:Graph, atividade, local_atividade_oroginal: str, atividade_original):
+
+        self.atividade_atual = atividade
+
+        # if self.comodo_atual != atividade.nome:
+        #     self.comodo_atual.desativa_sensor(self)
+        yield self.env.process(self.rota_ate(grafo_casa, self.comodo_atual, atividade.local_atividade.nome))
+        self.comodo_atual = atividade.local_atividade
+        # self.comodo_atual.ativa_sensor(self)
+        yield self.env.process(atividade.executar(self, atividade.local_atividade))
+
+        self.atividade_atual = atividade_original
+
+        yield self.env.process(self.rota_ate(grafo_casa, self.comodo_atual, local_atividade_oroginal))
+
+
     def _define_periodo_atividade(self):
-        atividade = self.rotina_semana[Tempo.dia_da_semana(self.env)][self.contador_evento]
+        atividade = self.rotina_semana[Tempo.dia_da_semana(self.env.now)][self.contador_evento]
 
         # ferifica a o tempo restante do dia e atribui para a ultima atividade
-        if atividade == self.rotina_semana[Tempo.dia_da_semana(self.env)][-1]:
+        if atividade == self.rotina_semana[Tempo.dia_da_semana(self.env.now)][-1]:
             t = self.env.now
             atividade.duracao = 86400 - (self.env.now % 86400)
             return atividade
@@ -52,20 +71,30 @@ class Usuario:
         atividade.variacao = int(uniform(0, atividade.duracao * atividade.taxa_erro))
         return atividade
 
-    def proxima_atividade(self):
-        atividade = self.rotina_semana[Tempo.dia_da_semana(self.env)][self.contador_evento]
+    def proxima_atividade(self) -> Atividade:
+        semana = Tempo.dia_da_semana(self.env.now)
+        evento = self.contador_evento
+        if self.contador_evento >= len(self.rotina_semana[Tempo.dia_da_semana(self.env.now)])-1 or self.semana_anterior != semana:
+            evento=0
+            # if semana == 6:
+            #     semana = 0
+            # else:
+            #     semana+=1
+        else:
+            evento+=1
+        return self.rotina_semana[semana][evento]
 
     def contador_index_evento(self):
-        semana_atual = Tempo.dia_da_semana(self.env)
-        tr = len(self.rotina_semana[Tempo.dia_da_semana(self.env)]) - 1
+        semana_atual = Tempo.dia_da_semana(self.env.now)
+        tr = len(self.rotina_semana[Tempo.dia_da_semana(self.env.now)]) - 1
         if self.contador_evento is None:
             self.contador_evento = 0
-            self.semana_anterior = Tempo.dia_da_semana(self.env)
+            self.semana_anterior = Tempo.dia_da_semana(self.env.now)
         elif self.contador_evento >= tr or semana_atual != self.semana_anterior:
             self.contador_evento = 0
         else:
             self.contador_evento += 1
-        self.semana_anterior = Tempo.dia_da_semana(self.env)
+        self.semana_anterior = Tempo.dia_da_semana(self.env.now)
 
     # RETORNA A ROTA MAIS CURTA DE UM PONTO ATÉ O OUTO COMODO
     def rota_ate(self, grafo, localAtual, objetivo):

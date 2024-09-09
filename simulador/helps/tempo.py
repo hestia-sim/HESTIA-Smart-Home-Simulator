@@ -31,5 +31,5 @@ class Tempo:
         return timedelta(seconds=env.now) % timedelta(seconds=86400)
 
     @staticmethod
-    def dia_da_semana(env: Environment) ->int:
-        return (__class__.data_inicio + timedelta(seconds=env.now)).weekday()
+    def dia_da_semana(segunto: int) ->int:
+        return (__class__.data_inicio + timedelta(seconds=segunto)).weekday()

@@ -64,10 +64,11 @@ def generate_data():
             automacao = montador.monta_automacao(env, comodos_da_casa, dados["AUTOMACAO"])
             # nx.draw(grafo_comodos, with_labels=True)
             montador.relaciona_atividades_e_usuario(atividades, usuarios)
+            UsuariosHelp(usuarios, atividades, grafo_comodos)
             montador.inicializa_processos(env, usuarios, grafo_comodos, automacao)
 
             ############################### INICIA APLICAÇÃO ###############################
-            UsuariosHelp(usuarios)
+
             inicia_simulacao(env, dias_simulacao)
             nome_arquivo = GravarDados.gravar(initial_path)
 
@@ -111,7 +112,7 @@ def generate_data_debug(tipo_selecionado, dias_simulacao, nome_rotina):
         montador.inicializa_processos(env, usuarios, grafo_comodos, automacao)
 
         ############################### INICIA APLICAÇÃO ###############################
-        UsuariosHelp(usuarios)
+        UsuariosHelp(usuarios, atividades, grafo_comodos)
         inicia_simulacao(env, dias_simulacao)
         nome_arquivo = GravarDados.gravar(initial_path)
 
@@ -120,7 +121,7 @@ def generate_data_debug(tipo_selecionado, dias_simulacao, nome_rotina):
 
 if __name__ == "__main__":
     tipos = ['completo', 'simples', 'back']
-    dias_simulacao = 30
-    nome_rotina = "Grafo_teste-grupo(1usuarios_sem_variacao)"
+    dias_simulacao = 14
+    nome_rotina = "Cenario_validacao_Artigo(1usuarios-casa-mayki)"
 
     generate_data_debug(tipos[0], dias_simulacao, nome_rotina)
