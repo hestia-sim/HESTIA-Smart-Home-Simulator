@@ -39,7 +39,7 @@ class Comodo:
             ######inicio logica
             if atividades_associadas is not None:
                 quantidade_blocos = int(duracao/600) #divide em blocos de 10 minutos
-                resto_duracao = duracao % 600
+                resto_duracao = duracao
 
                 for b in range(quantidade_blocos):
                     atividade_para_sorteio = [None] + list(atividades_associadas.keys())
@@ -48,6 +48,7 @@ class Comodo:
                     if atividade_sorteada is not None:
                         atividade_secundaria = UsuariosHelp.pega_atividade(atividade_sorteada)
                         # atividade_secundaria.duracao = 600
+                        resto_duracao -= atividade_secundaria.duracao
                         # atividade_secundaria.secundaria = True
                         # self.desativa_sensor(usuario_action)
 
@@ -62,9 +63,12 @@ class Comodo:
                         if len(atuadores_variaveis) > 0:
                             yield from self.inicia_atuadores(atuadores_variaveis, usuario_action, atividade_original.nome)
                     else:
+                        resto_duracao -= 600
                         yield self.env.timeout(600)
-
-                yield self.env.timeout(resto_duracao)
+                if resto_duracao<=0:
+                    yield self.env.timeout(0)
+                else:
+                    yield self.env.timeout(resto_duracao)
             else:
                 yield self.env.timeout(duracao)
 

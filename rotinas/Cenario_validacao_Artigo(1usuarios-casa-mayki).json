@@ -194,9 +194,25 @@
 			"taxa_erro": 0.2,
 			"local_atividade": "QUARTO",
 			"atividades_associadas": {
-				"USAR_BANHEIRO": 0.05,
+				"USAR_BANHEIRO": 0.02,
 				"IR_NA_VARANDA": 0.07,
-				"BEBER_AGUA": 0.05
+				"BEBER_AGUA": 0.03
+			},
+			"lista_atuadores_atividade": {
+				"LAMPADA": ["ON", "D"],
+				"PLUG_01": ["ON", "P"]
+			}
+		},
+		"Usar_pc_noite_qui": {
+			"nome": "USAR_PC_NOITE_QUI",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 60,
+			"taxa_erro": 0.2,
+			"local_atividade": "QUARTO",
+			"atividades_associadas": {
+				"IR_NA_VARANDA": 0.02,
+				"BEBER_AGUA": 0.02
 			},
 			"lista_atuadores_atividade": {
 				"LAMPADA": ["ON", "D"],
@@ -224,8 +240,8 @@
 			"taxa_erro": 0.2,
 			"local_atividade": "QUARTO",
 			"atividades_associadas": {
-				"USAR_BANHEIRO": 0.06,
-				"IR_NA_VARANDA": 0.05,
+				"USAR_BANHEIRO": 0.03,
+				"IR_NA_VARANDA": 0.08,
 				"BEBER_AGUA": 0.08
 			},
 			"lista_atuadores_atividade": {
@@ -295,6 +311,42 @@
 				"PLUG_01": ["ON", "P"]
 			}
 		},
+		"Usar_pc_noite_fim_qui": {
+			"nome": "USAR_PC_NOITE_FIM_QUI",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 60,
+			"taxa_erro": 0.2,
+			"local_atividade": "QUARTO",
+			"atividades_associadas": {
+				"USAR_BANHEIRO": 0.03,
+				"IR_NA_VARANDA": 0.09,
+				"BEBER_AGUA": 0.04,
+				"PREPARAR_LANCHE": 0.05
+			},
+			"lista_atuadores_atividade": {
+				"LAMPADA": ["ON", "D"],
+				"PLUG_01": ["ON", "P"]
+			}
+		},
+		"Usar_pc_noite_fim_qua": {
+			"nome": "USAR_PC_NOITE_FIM_QUA",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 60,
+			"taxa_erro": 0.2,
+			"local_atividade": "QUARTO",
+			"atividades_associadas": {
+				"USAR_BANHEIRO": 0.05,
+				"IR_NA_VARANDA": 0.1,
+				"BEBER_AGUA": 0.06,
+				"PREPARAR_LANCHE": 0.06
+			},
+			"lista_atuadores_atividade": {
+				"LAMPADA": ["ON", "D"],
+				"PLUG_01": ["ON", "P"]
+			}
+		},
 		"Usar_pc_noite_fim_seg": {
 			"nome": "USAR_PC_NOITE_FIM_SEG",
 			"inicio_ocorrencia": null,
@@ -331,6 +383,22 @@
 				"PLUG_01": ["ON", "P"]
 			}
 		},
+		"Usar_pc_madrugada_inicio_30m": {
+			"nome": "USAR_PC_MADRUGADA_INICIO_30M",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.2,
+			"local_atividade": "QUARTO",
+			"atividades_associadas": {
+				"USAR_BANHEIRO": 0.02,
+				"BEBER_AGUA": 0.01
+			},
+			"lista_atuadores_atividade": {
+				"LAMPADA": ["ON", "D"],
+				"PLUG_01": ["ON", "P"]
+			}
+		},
 		"Usar_pc_madrugada_inicio_seg_30m1": {
 			"nome": "USAR_PC_MADRUGADA_INICIO_SEG_30M1",
 			"inicio_ocorrencia": null,
@@ -339,8 +407,8 @@
 			"taxa_erro": 0.1,
 			"local_atividade": "QUARTO",
 			"atividades_associadas": {
-				"USAR_BANHEIRO": 0.08,
-				"IR_NA_VARANDA": 0.031,
+				"USAR_BANHEIRO": 0.02,
+				"IR_NA_VARANDA": 0.01,
 				"BEBER_AGUA": 0.022
 			},
 			"lista_atuadores_atividade": {
@@ -356,7 +424,7 @@
 			"taxa_erro": 0.0,
 			"local_atividade": "QUARTO",
 			"atividades_associadas": {
-				"IR_NA_VARANDA": 0.08
+				"IR_NA_VARANDA": 0.1
 			},
 			"lista_atuadores_atividade": {
 				"LAMPADA": ["ON", "D"],
@@ -392,11 +460,27 @@
 				"USAR_BANHEIRO": 0.001
 			},
 			"lista_atuadores_atividade": {
-				"PLUG_02": ["ON", "P"]
+				"PLUG_02": ["ON", "P"],
+				"LAMPADA": ["OFF", "D"]
 			}
 		},
 		"Dormir": {
 			"nome": "DORMIR",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 360,
+			"taxa_erro": 0.02,
+			"local_atividade": "QUARTO",
+			"atividades_associadas": {
+				"USAR_BANHEIRO": 0.01
+			},
+			"lista_atuadores_atividade": {
+				"LAMPADA": ["OFF", "D"],
+				"PLUG_02": ["ON", "P"]
+			}
+		},
+		"Dormir_qua": {
+			"nome": "DORMIR_QUA",
 			"inicio_ocorrencia": null,
 			"fim_ocorrencia": null,
 			"duracao": 360,
@@ -406,6 +490,7 @@
 				"USAR_BANHEIRO": 0.01
 			},
 			"lista_atuadores_atividade": {
+				"LAMPADA": ["OFF", "D"],
 				"PLUG_02": ["ON", "P"]
 			}
 		},
@@ -420,6 +505,7 @@
 				"USAR_BANHEIRO": 0.01
 			},
 			"lista_atuadores_atividade": {
+				"LAMPADA": ["OFF", "D"],
 				"PLUG_02": ["ON", "P"]
 			}
 		},
@@ -428,12 +514,39 @@
 			"inicio_ocorrencia": null,
 			"fim_ocorrencia": null,
 			"duracao": 30,
-			"taxa_erro": 0.015,
+			"taxa_erro": 0.1,
 			"local_atividade": "QUARTO",
 			"atividades_associadas": {
 				"USAR_BANHEIRO": 0.01
 			},
 			"lista_atuadores_atividade": {
+				"LAMPADA": ["OFF", "D"],
+				"PLUG_02": ["ON", "P"]
+			}
+		},
+		"Dormir_30m_qua": {
+			"nome": "DORMIR_30M_QUA",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.0,
+			"local_atividade": "QUARTO",
+			"atividades_associadas": {},
+			"lista_atuadores_atividade": {
+				"LAMPADA": ["OFF", "D"],
+				"PLUG_02": ["ON", "P"]
+			}
+		},
+		"Dormir_30m_qui": {
+			"nome": "DORMIR_30M_QUI",
+			"inicio_ocorrencia": null,
+			"fim_ocorrencia": null,
+			"duracao": 30,
+			"taxa_erro": 0.3,
+			"local_atividade": "QUARTO",
+			"atividades_associadas": {},
+			"lista_atuadores_atividade": {
+				"LAMPADA": ["OFF", "D"],
 				"PLUG_02": ["ON", "P"]
 			}
 		},
@@ -467,10 +580,10 @@
 			"comodo_atual": "RUA",
 			"preferencia": {},
 			"rotina_semana": [
-				["USAR_PC_MADRUGADA_INICIO_SEG_30M1", "USAR_PC_MADRUGADA_INICIO_SEG_20M2", "DORMIR", "DORMIR_30M", "ESCOVAR_DENTE", "PREPARAR_CAFE_DA_MANHA", "USAR_PC_MANHA", "FAZER_NADA_DIA", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M","SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "FAZER_NADA_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE_VAZIO","USAR_PC_NOITE_VAZIO", "USAR_PC_NOITE_FIM_SEG"],
-				["DORMIR", "DORMIR_30M", "DORMIR_30M", "DORMIR_30M", "DORMIR_30M", "USAR_BANHEIRO", "ESCOVAR_DENTE", "PREPARAR_CAFE_DA_MANHA", "FAZER_NADA_DIA", "USAR_PC_MANHA_30M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M","SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "FAZER_NADA_NOITE", "FAZER_NADA_NOITE", "USAR_PC_NOITE_TERCA", "USAR_PC_NOITE_VAZIO", "USAR_PC_NOITE_VAZIO", "USAR_PC_NOITE_FIM"],
-				["DORMIR","DORMIR_30M","DORMIR_30M","DORMIR_30M","DORMIR_30M","DORMIR_30M", "ESCOVAR_DENTE","USAR_PC_MANHA_30M", "PREPARAR_CAFE_DA_MANHA", "USAR_PC_MANHA", "FAZER_NADA_DIA", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M","SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "FAZER_NADA_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE_FIM"],
-				["DORMIR","DORMIR_30M","DORMIR_30M","DORMIR_30M","DORMIR_30M", "ESCOVAR_DENTE", "USAR_PC_MANHA_30M", "FAZER_NADA_DIA", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M","SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "FAZER_NADA_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE_FIM"],
+				["USAR_PC_MADRUGADA_INICIO_SEG_30M1", "USAR_PC_MADRUGADA_INICIO_SEG_20M2", "DORMIR", "DORMIR_30M", "DORMIR_30M", "ESCOVAR_DENTE", "PREPARAR_CAFE_DA_MANHA", "FAZER_NADA_DIA", "USAR_PC_MANHA", "FAZER_NADA_DIA", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M","SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "USAR_PC_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE_VAZIO","USAR_PC_NOITE_VAZIO", "USAR_PC_NOITE_FIM_SEG"],
+				["DORMIR", "DORMIR_30M", "DORMIR_30M", "DORMIR_30M", "DORMIR_30M", "USAR_BANHEIRO", "ESCOVAR_DENTE", "PREPARAR_CAFE_DA_MANHA", "FAZER_NADA_DIA", "USAR_PC_MANHA_30M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M","SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "FAZER_NADA_NOITE", "FAZER_NADA_NOITE", "FAZER_NADA_NOITE", "USAR_PC_NOITE_TERCA", "USAR_PC_NOITE_VAZIO", "USAR_PC_NOITE_VAZIO", "USAR_PC_NOITE_FIM"],
+				["FAZER_NADA_NOITE", "DORMIR_QUA","DORMIR_30M_QUA","DORMIR_30M_QUA","DORMIR_30M_QUA","DORMIR_30M_QUA","DORMIR_30M_QUA", "DORMIR_30M_QUA", "ESCOVAR_DENTE", "USAR_PC_MANHA", "FAZER_NADA_DIA", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "FAZER_NADA_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE_FIM_QUA"],
+				["DORMIR","DORMIR_30M","DORMIR_30M","DORMIR_30M","DORMIR_30M_QUI", "ESCOVAR_DENTE", "USAR_PC_MANHA_30M", "FAZER_NADA_DIA", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M","SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "FAZER_NADA_NOITE", "USAR_PC_NOITE_QUI", "USAR_PC_NOITE_QUI", "USAR_PC_NOITE_FIM_QUI"],
 				["USAR_PC_MADRUGADA_INICIO","DORMIR","DORMIR_30M","DORMIR_30M","DORMIR_30M", "ESCOVAR_DENTE", "FAZER_NADA_DIA", "FAZER_NADA_DIA", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "FAZER_NADA_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE_FIM"],
 				["USAR_PC_MADRUGADA_INICIO", "USAR_PC_NOITE_30M", "DORMIR_FIM_SEM","DORMIR_30M", "FAZER_NADA_DIA", "ESCOVAR_DENTE", "USAR_PC_MANHA", "USAR_PC_MANHA", "USAR_PC_MANHA", "USAR_PC_MANHA","USAR_PC_MANHA","USAR_PC_MANHA","USAR_PC_MANHA","USAR_PC_MANHA","USAR_PC_MANHA", "USAR_PC_NOITE_FIM"],
 				["USAR_PC_MADRUGADA_INICIO", "USAR_PC_NOITE_30M", "DORMIR_FIM_SEM", "ESCOVAR_DENTE", "USAR_PC_MANHA_FIM_SEM", "USAR_PC_MANHA_FIM_SEM", "SAIR_COMODO_60M", "USAR_PC_MANHA_FIM_SEM", "USAR_PC_MANHA_FIM_SEM", "USAR_PC_MANHA", "SAIR_COMODO_60M", "USAR_PC_MANHA_FIM_SEM"]
