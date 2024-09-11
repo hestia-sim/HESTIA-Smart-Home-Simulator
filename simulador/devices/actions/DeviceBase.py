@@ -37,13 +37,13 @@ class DeviceBase(ABC):
     def __hash__(self) -> int:
         return hash(self.device)
 
-    def iniciar_uso(self, usuario_action: Usuario) -> None:
+    def iniciar_uso(self, usuario_action: Usuario, nome_atividade:str) -> None:
         self._ligar()
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
-    def finalizar_uso(self, usuario_action: Usuario) -> None:
+    def finalizar_uso(self, usuario_action: Usuario, nome_atividade:str) -> None:
         self._desligar()
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
     def compara_message(self, message: dict):
         for dicionario in message["status"]:
@@ -69,7 +69,7 @@ class DeviceBase(ABC):
         pass
 
     @abstractmethod
-    def _mensagem(self, usuario: Usuario) -> None:
+    def _mensagem(self, usuario: Usuario, nome_atividade:str) -> None:
         pass
 
     @abstractmethod

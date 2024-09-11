@@ -22,7 +22,7 @@ class MovimentSensorAction(SensorBase):
     def is_ligado(self) -> bool:
         return self.presence_state == Status.ON
 
-    def _mensagem(self, usuario: Usuario) -> None:
+    def _mensagem(self, usuario: Usuario, nome_atividade:str) -> None:
         if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {
@@ -41,7 +41,7 @@ class MovimentSensorAction(SensorBase):
             mensagem = self.presence_state.value
 
         if self.compara_message(mensagem):
-            GravarDados.envia_dados(self.device, self.devId, self.productKey, mensagem, self.tipoEnv, usuario.nome, usuario.atividade_atual.nome,
+            GravarDados.envia_dados(self.device, self.devId, self.productKey, mensagem, self.tipoEnv, usuario.nome, nome_atividade,
                                     Tempo.data_atual_simulacao_formatado(self.env), self.nome_comodo)
 
     def mudar(self, **kwargs):

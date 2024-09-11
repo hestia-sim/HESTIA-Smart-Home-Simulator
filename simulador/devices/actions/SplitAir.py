@@ -44,7 +44,7 @@ class SplitAir(DeviceBase):
 
         self._mensagem(usuario_action)
 
-    def _mensagem(self, usuario: Usuario):
+    def _mensagem(self, usuario: Usuario, nome_atividade:str):
         if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {
@@ -69,7 +69,7 @@ class SplitAir(DeviceBase):
 
         if self.compara_message(mensagem):
             GravarDados.envia_dados(self.device, self.devId, self.productKey, mensagem, self.tipoEnv, usuario.nome,
-                                    usuario.atividade_atual.nome,
+                                    nome_atividade,
                                     Tempo.data_atual_simulacao_formatado(self.env), self.nome_comodo)
 
     def iniciar_uso(self, usuario_action: Usuario) -> None:

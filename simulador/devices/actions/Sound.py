@@ -37,7 +37,7 @@ class Sound(DeviceBase):
             value = 0
         return value
 
-    def _mensagem(self, usuario: Usuario) -> None:
+    def _mensagem(self, usuario: Usuario, nome_atividade:str) -> None:
         if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {
@@ -57,7 +57,7 @@ class Sound(DeviceBase):
 
         if self.compara_message(mensagem):
             GravarDados.envia_dados(self.device, self.devId, self.productKey, mensagem, self.tipoEnv, usuario.nome,
-                                    usuario.atividade_atual.nome,
+                                    nome_atividade,
                                     Tempo.data_atual_simulacao_formatado(self.env), self.nome_comodo)
 
     def status(self) -> str:

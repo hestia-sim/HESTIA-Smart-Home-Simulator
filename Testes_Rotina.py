@@ -1,28 +1,22 @@
 import json
 from datetime import timedelta
 
+
 def calcula_horario_atividade(rotina, atividades):
     horario = timedelta(0)
 
     for u in rotina:
-       horario += timedelta(minutes=atividades[u.capitalize()]["duracao"])
+        horario += timedelta(minutes=atividades[u.capitalize()]["duracao"])
     return horario
 
 
 with open('./rotinas/Cenario_validacao_Artigo(1usuarios-casa-mayki).json') as json_file:
     dados = json.load(json_file)
-    rotina_dia = ["USAR_PC_MADRUGADA_INICIO","DORMIR","DORMIR_30M","DORMIR_30M","DORMIR_30M",
-                  "ESCOVAR_DENTE", "FAZER_NADA_DIA", "FAZER_NADA_DIA", "SAIR_COMODO_60M", "SAIR_COMODO_60M",
-                  "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M",
-                  "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "FAZER_NADA_NOITE",
-                  "USAR_PC_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE_FIM"]
+    rotina_dia = ["USAR_PC_MADRUGADA_INICIO_SEG_30M1", "USAR_PC_MADRUGADA_INICIO_SEG_20M2", "DORMIR", "DORMIR_30M", "ESCOVAR_DENTE", "PREPARAR_CAFE_DA_MANHA", "USAR_PC_MANHA", "FAZER_NADA_DIA", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M","SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_60M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "SAIR_COMODO_10M", "FAZER_NADA_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE_SEG","USAR_PC_NOITE_SEG"]
 
-
-    
     horario = calcula_horario_atividade(rotina_dia, dados['ATIVIDADES'])
 
     print(horario)
-
 
 # Segunda-feira
 # ["USAR_PC_MADRUGADA_INICIO", "USAR_PC_NOITE","FAZER_NADA_NOITE", "DORMIR", "ESCOVAR_DENTE", "PREPARAR_CAFE_DA_MANHA", "USAR_PC_MANHA", "USAR_PC_MANHA", "FAZER_NADA_DIA", "SAIR_COMODO_01", "SAIR_COMODO_01", "SAIR_COMODO_01", "SAIR_COMODO_01","SAIR_COMODO_01", "SAIR_COMODO_01", "SAIR_COMODO_01", "SAIR_COMODO_02", "SAIR_COMODO_02", "FAZER_NADA_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE", "USAR_PC_NOITE_FIM"]

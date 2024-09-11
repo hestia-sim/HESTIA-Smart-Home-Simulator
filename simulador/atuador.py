@@ -1,5 +1,6 @@
 import simpy
 
+from simulador.atividade import Atividade
 from simulador.helps.gravar_dados import GravarDados
 from simulador.helps.status import Status
 from simulador.helps.tempo import Tempo
@@ -29,13 +30,13 @@ class Atuador:
     #         yield self.env.timeout(tempoUtilizacao)
     #         self.finalizar_uso(self.env.now, userAction, grupo)
 
-    def iniciar_uso(self, userAction):
+    def iniciar_uso(self, userAction, atividade:str):
         self.status = Status.ON
-        self._completa_mensagem(userAction)
+        self._completa_mensagem(userAction, atividade)
 
-    def finalizar_uso(self, userAction):
+    def finalizar_uso(self, userAction, atividade: str):
         self.status = Status.OFF
-        self._completa_mensagem(userAction)
+        self._completa_mensagem(userAction, atividade)
 
     def _muda_status(self):
         if self.status == Status.OFF:
@@ -43,8 +44,8 @@ class Atuador:
         else:
             self.status = Status.OFF
 
-    def _completa_mensagem(self, usuario):
-        GravarDados.envia_dados(self.device, self.status, self.tipo, usuario.nome,usuario.atividade_atual.nome, Tempo.data_atual_simulacao(self.env))
+    def _completa_mensagem(self, usuario, atividade:str):
+        GravarDados.envia_dados(self.device, self.status, self.tipo, usuario.nome,atividade, Tempo.data_atual_simulacao(self.env))
 
     def is_ligado(self):
         return self.status == Status.ON

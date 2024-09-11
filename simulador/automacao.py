@@ -30,9 +30,9 @@ class Automacao:
                 a = c.atuadores[c.atuadores.index(self.atuador)]
                 with c.resource.request() as rq:
                     yield rq
-                    a.iniciar_uso(usuario_automacao)
+                    a.iniciar_uso(usuario_automacao, "automacao")
                     yield self.env.timeout(self.duracao)
-                    a.finalizar_uso(usuario_automacao)
+                    a.finalizar_uso(usuario_automacao, "automacao")
 
 
 

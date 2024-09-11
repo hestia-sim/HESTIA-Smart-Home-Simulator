@@ -22,12 +22,14 @@ class Usuario:
         self.contador_evento = None
         self.semana_anterior = None
         self.atividade_atual = None
+        self.proxima_atividade = None
 
     def gerar_evento(self, grafo_casa):
         while True:
             self.contador_index_evento()
             atividade = self._define_periodo_atividade()
             self.atividade_atual = atividade
+            self.proxima_atividade = self.pega_proxima_atividade()
 
             # if self.comodo_atual != atividade.local_atividade:
             #     self.comodo_atual.desativa_sensor(self)
@@ -38,16 +40,16 @@ class Usuario:
 
     def atividade_secundaria(self, grafo_casa:Graph, atividade, local_atividade_oroginal: str, atividade_original):
 
-        self.atividade_atual = atividade
+        # self.atividade_atual = atividade
 
         # if self.comodo_atual != atividade.nome:
         #     self.comodo_atual.desativa_sensor(self)
         yield self.env.process(self.rota_ate(grafo_casa, self.comodo_atual, atividade.local_atividade.nome))
-        self.comodo_atual = atividade.local_atividade
+        # self.comodo_atual = atividade.local_atividade
         # self.comodo_atual.ativa_sensor(self)
-        yield self.env.process(atividade.executar(self, atividade.local_atividade))
+        yield self.env.process(atividade.executar_secundaria(self, atividade.local_atividade))
 
-        self.atividade_atual = atividade_original
+        # self.atividade_atual = atividade_original
 
         yield self.env.process(self.rota_ate(grafo_casa, self.comodo_atual, local_atividade_oroginal))
 
@@ -71,8 +73,8 @@ class Usuario:
         atividade.variacao = int(uniform(0, atividade.duracao * atividade.taxa_erro))
         return atividade
 
-    def proxima_atividade(self) -> Atividade:
-        semana = Tempo.dia_da_semana(self.env.now)
+    def pega_proxima_atividade(self) -> Atividade:
+        semana = Tempo.dia_da_semana(self.env.now + self.atividade_atual.duracao)
         evento = self.contador_evento
         if self.contador_evento >= len(self.rotina_semana[Tempo.dia_da_semana(self.env.now)])-1 or self.semana_anterior != semana:
             evento=0

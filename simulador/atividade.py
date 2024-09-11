@@ -13,11 +13,17 @@ class Atividade:
         self.inicio_ocorrencia = inicio_ocorrencia
         self.fim_ocorrencia = fim_ocorrencia
         self.variacao = 0
+        self.secundaria = None
 
     def executar(self, usuario_action, local_atividade):
         tempo = self.duracao + self.variacao
         yield self.env.process(
             local_atividade.entrar(self, tempo, usuario_action, self.lista_atuadores_atividade, local_atividade, self.atividades_associadas))
+
+    def executar_secundaria(self, usuario_action, local_atividade):
+        tempo = self.duracao + self.variacao
+        yield self.env.process(
+            local_atividade.entrar_secundaria(self, tempo, usuario_action, self.lista_atuadores_atividade, local_atividade, self.atividades_associadas))
 
     def __str__(self):
         return self.nome

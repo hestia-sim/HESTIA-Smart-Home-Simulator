@@ -1,5 +1,6 @@
 import json
 import sys
+import random
 
 import simpy
 import os
@@ -119,6 +120,7 @@ def generate_data_debug(tipo_selecionado, dias_simulacao, nome_rotina):
         print_infos(env, dias_simulacao, nome_rotina, nome_arquivo)
 
 
+random.seed(123)
 if __name__ == "__main__":
     tipos = ['completo', 'simples', 'back']
     dias_simulacao = 14
