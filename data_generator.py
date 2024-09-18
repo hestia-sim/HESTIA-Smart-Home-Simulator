@@ -120,10 +120,10 @@ def generate_data_debug(tipo_selecionado, dias_simulacao, nome_rotina):
         print_infos(env, dias_simulacao, nome_rotina, nome_arquivo)
 
 
-# random.seed(123)
+random.seed(123)
 if __name__ == "__main__":
     tipos = ['completo', 'simples', 'back']
     dias_simulacao = 14
-    nome_rotina = "Cenario_validacao_Artigo(1usuarios-casa-mayki)"
+    nome_rotina = "Grafo_teste-grupo(3usuarios)"
 
     generate_data_debug(tipos[0], dias_simulacao, nome_rotina)

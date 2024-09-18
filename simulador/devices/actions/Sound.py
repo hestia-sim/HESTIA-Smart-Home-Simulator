@@ -21,14 +21,14 @@ class Sound(DeviceBase):
     def is_ligado(self):
         return self.switch == Status.ON
 
-    def mudar_volume(self, valor: int, usuario_action: Usuario) -> None:
+    def mudar_volume(self, valor: int, usuario_action: Usuario, nome_atividade: str) -> None:
         self.sound_volume = self._limite_entrada(valor)
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
-    def mudar(self, usuario_action: Usuario, switch: str, sound_volume: int):
+    def mudar(self, usuario_action: Usuario, switch: str, sound_volume: int, nome_atividade: str):
         self.switch = Status[switch]
         self.sound_volume = self._limite_entrada(sound_volume)
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
     def _limite_entrada(self, value: int):
         if value > 100:
@@ -37,7 +37,7 @@ class Sound(DeviceBase):
             value = 0
         return value
 
-    def _mensagem(self, usuario: Usuario, nome_atividade:str) -> None:
+    def _mensagem(self, usuario: Usuario, nome_atividade: str) -> None:
         if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {

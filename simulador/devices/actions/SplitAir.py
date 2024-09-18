@@ -22,13 +22,13 @@ class SplitAir(DeviceBase):
     def is_ligado(self) -> bool:
         return self.switch == Status.ON
 
-    def mudar_temperatura(self, valor: int, usuario_action: Usuario) -> None:
+    def mudar_temperatura(self, valor: int, usuario_action: Usuario, nome_atividade: str) -> None:
         self.temp_set = self._limite_entrada(valor)
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
-    def mudar_modo(self, valor: ModeAir, usuario_action: Usuario) -> None:
+    def mudar_modo(self, valor: ModeAir, usuario_action: Usuario, nome_atividade: str) -> None:
         self.mode = valor
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
     def _limite_entrada(self, value: int):
         if value > 30:
@@ -37,14 +37,14 @@ class SplitAir(DeviceBase):
             value = 16
         return value
 
-    def mudar(self, usuario_action: Usuario, switch: str, temp_set: int, mode: str):
+    def mudar(self, usuario_action: Usuario, switch: str, temp_set: int, mode: str, nome_atividade: str):
         self.switch = Status[switch]
         self.temp_set = self._limite_entrada(temp_set)
         self.mode = ModeAir[mode]
 
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
-    def _mensagem(self, usuario: Usuario, nome_atividade:str):
+    def _mensagem(self, usuario: Usuario, nome_atividade: str):
         if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {
@@ -72,13 +72,13 @@ class SplitAir(DeviceBase):
                                     nome_atividade,
                                     Tempo.data_atual_simulacao_formatado(self.env), self.nome_comodo)
 
-    def iniciar_uso(self, usuario_action: Usuario) -> None:
+    def iniciar_uso(self, usuario_action: Usuario, atividade: str) -> None:
         self._ligar()
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, atividade)
 
-    def finalizar_uso(self, usuario_action: Usuario) -> None:
+    def finalizar_uso(self, usuario_action: Usuario, atividade: str) -> None:
         self._desligar()
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, atividade)
 
     def status(self) -> str:
         return self.switch.value

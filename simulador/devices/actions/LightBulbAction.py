@@ -23,19 +23,20 @@ class LightBulbAction(DeviceBase):
     def is_ligado(self) -> bool:
         return self.switch_led == Status.ON
 
-    def mudar_tempoeratura(self, value: int, usuario_action: Usuario) -> None:
+    def mudar_tempoeratura(self, value: int, usuario_action: Usuario, nome_atividade: str) -> None:
         self.temp_value_v2 = self._limite_entrada(value)
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
-    def mudar_brilho(self, value: int, usuario_action: Usuario) -> None:
+    def mudar_brilho(self, value: int, usuario_action: Usuario, nome_atividade: str) -> None:
         self.bright_value_v = self._limite_entrada(value)
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
-    def mudar(self, usuario_action: Usuario, switch_led: str, temp_value_v2: int, bright_value_v2: int):
+    def mudar(self, usuario_action: Usuario, switch_led: str, temp_value_v2: int, bright_value_v2: int,
+              nome_atividade: str):
         self.switch_led = Status[switch_led]
         self.temp_value_v2 = self._limite_entrada(temp_value_v2)
         self.bright_value_v2 = self._limite_entrada(bright_value_v2)
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
     def _limite_entrada(self, value: int) -> int:
         if value > 1000:
@@ -44,7 +45,7 @@ class LightBulbAction(DeviceBase):
             value = 0
         return value
 
-    def _mensagem(self, usuario: Usuario, nome_atividade:str) -> None:
+    def _mensagem(self, usuario: Usuario, nome_atividade: str) -> None:
         if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {

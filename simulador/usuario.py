@@ -3,6 +3,7 @@ from datetime import datetime
 from random import uniform
 
 import networkx as nx
+from networkx.utils import pairwise
 from networkx import Graph
 
 
@@ -100,8 +101,9 @@ class Usuario:
 
     # RETORNA A ROTA MAIS CURTA DE UM PONTO ATÉ O OUTO COMODO
     def rota_ate(self, grafo, localAtual, objetivo):
-        caminho = nx.astar_path(grafo, source=localAtual, target=objetivo)[1:]
-        for i in caminho:
-            if i.nome != objetivo:
-                self.comodo_atual = i
-                yield self.env.process(i.passar(self))
+        rota = nx.astar_path(grafo, source=localAtual, target=objetivo)
+        caminho_pesos = [(u, v, grafo[u][v]['weight']) for u, v in pairwise(rota)]
+        for origem_comodo, proximo_comodo, distancia in caminho_pesos:
+            if proximo_comodo.nome != objetivo:
+                self.comodo_atual = proximo_comodo
+                yield self.env.process(proximo_comodo.passar(self, distancia))

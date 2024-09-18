@@ -20,12 +20,11 @@ class Plug(DeviceBase):
     def is_ligado(self) -> bool:
         return self.switch_1 == Status.ON
 
-    def mudar(self, usuario_action: Usuario, switch: str):
+    def mudar(self, usuario_action: Usuario, switch: str, nome_atividade: str):
         self.switch_1 = Status[switch]
-        self._mensagem(usuario_action)
+        self._mensagem(usuario_action, nome_atividade)
 
-
-    def _mensagem(self, usuario: Usuario, nome_atividade:str) -> None:
+    def _mensagem(self, usuario: Usuario, nome_atividade: str) -> None:
         if self.tipo_selecionado == "completo":
             mensagem = {"status": [
                 {
