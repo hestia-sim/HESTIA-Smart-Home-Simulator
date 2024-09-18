@@ -13,7 +13,7 @@
 		}
 	},
 	"GRAFO_COMODOS": [
-		["RUA", "QUARTO"]
+		["RUA", "QUARTO", 5]
 	],
 	"ATIVIDADES": {
 		"Ir_na_varanda": {

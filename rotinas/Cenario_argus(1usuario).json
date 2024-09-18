@@ -13,7 +13,7 @@
 		}
 	},
 	"GRAFO_COMODOS": [
-		["RUA", "SALA"]
+		["RUA", "SALA", 5]
 	],
 	"ATIVIDADES": {
 		"Chegar": {
@@ -23,6 +23,7 @@
 			"duracao": 60,
 			"taxa_erro": 0,
 			"local_atividade": "RUA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"Chegar_30m": {
@@ -32,6 +33,7 @@
 			"duracao": 60,
 			"taxa_erro": 0.001,
 			"local_atividade": "RUA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"Fim_rotina": {
@@ -41,6 +43,7 @@
 			"duracao": 30,
 			"taxa_erro": 0,
 			"local_atividade": "RUA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"Sair_comodo": {
@@ -50,6 +53,7 @@
 			"duracao": 30,
 			"taxa_erro": 0,
 			"local_atividade": "RUA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"Sair_comodo_2h": {
@@ -59,6 +63,7 @@
 			"duracao": 120,
 			"taxa_erro": 0,
 			"local_atividade": "RUA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"invador_comodo": {
@@ -68,6 +73,7 @@
 			"duracao": 10,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"exercicio_120_minutos": {
@@ -77,11 +83,12 @@
 			"duracao": 120,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"TV": "OFF",
-				"AR_CONDICIONADO": "ON",
-				"SOM" : "ON"
+				"LAMPADA": ["ON", "D"],
+				"TV": ["OFF", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM" : ["ON", "D"]
 			}
 		},
 		"ler_livro_60_minutos": {
@@ -91,11 +98,12 @@
 			"duracao": 60,
 			"taxa_erro": 0.02,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"TV": "OFF",
-				"AR_CONDICIONADO": "OFF",
-				"SOM" : "OFF"
+				"LAMPADA": ["ON", "D"],
+				"TV": ["OFF", "D"],
+				"AR_CONDICIONADO": ["OFF", "D"],
+				"SOM" : ["OFF", "D"]
 			}
 		},
 		"usar_celular_30_minutos": {
@@ -105,11 +113,12 @@
 			"duracao": 30,
 			"taxa_erro": 0.05,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"TV": "OFF",
-				"AR_CONDICIONADO": "OFF",
-				"SOM" : "OFF"
+				"LAMPADA": ["ON", "D"],
+				"TV": ["OFF", "D"],
+				"AR_CONDICIONADO": ["OFF", "D"],
+				"SOM" : ["OFF", "D"]
 			}
 		},
 		"Assistir_tv_30_minutos": {
@@ -119,11 +128,12 @@
 			"duracao": 30,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"TV": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM" : "OFF"
+				"LAMPADA": ["ON", "D"],
+				"TV": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM" : ["OFF", "D"]
 			}
 		},
 		"Assistir_tv_120_minutos": {
@@ -133,11 +143,12 @@
 			"duracao": 120,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"TV": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["ON", "D"],
+				"TV": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["OFF", "D"]
 			}
 		},
 		"Ouvir_musica_30_minutos": {
@@ -147,11 +158,12 @@
 			"duracao": 30,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "ON",
-				"TV": "OFF"
+				"LAMPADA": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["ON", "D"],
+				"TV": ["OFF", "D"]
 			}
 		},
 		"Ouvir_musica_60_minutos": {
@@ -161,11 +173,12 @@
 			"duracao": 60,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "ON",
-				"TV": "OFF"
+				"LAMPADA": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["ON", "D"],
+				"TV": ["OFF", "D"]
 			}
 		},
 		"Estudar": {
@@ -175,11 +188,12 @@
 			"duracao": 60,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF",
-				"TV": "OFF"
+				"LAMPADA": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["OFF", "D"],
+				"TV": ["OFF", "D"]
 			}
 		},
 		"anomali_01": {
@@ -189,11 +203,12 @@
 			"duracao": 1,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "OFF",
-				"SOM": "OFF",
-				"TV": "OFF"
+				"LAMPADA": ["ON", "D"],
+				"AR_CONDICIONADO": ["OFF", "D"],
+				"SOM": ["OFF", "D"],
+				"TV": ["OFF", "D"]
 			}
 		},
 		"anomali_02": {
@@ -203,11 +218,12 @@
 			"duracao": 1,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "OFF",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF",
-				"TV": "OFF"
+				"LAMPADA": ["OFF", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["OFF", "D"],
+				"TV": ["OFF", "D"]
 			}
 		},
 		"anomali_03": {
@@ -217,11 +233,12 @@
 			"duracao": 1,
 			"taxa_erro": 0.0,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF",
-				"TV": "OFF"
+				"LAMPADA": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["OFF", "D"],
+				"TV": ["OFF", "D"]
 			}
 		}
 

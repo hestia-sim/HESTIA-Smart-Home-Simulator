@@ -13,7 +13,7 @@
 		}
 	},
 	"GRAFO_COMODOS": [
-		["RUA", "SALA"]
+		["RUA", "SALA", 5]
 	],
 	"ATIVIDADES": {
 		"Chegar": {
@@ -23,6 +23,7 @@
 			"duracao": 60,
 			"taxa_erro": 0.012,
 			"local_atividade": "RUA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"Chegar_30m": {
@@ -32,6 +33,7 @@
 			"duracao": 30,
 			"taxa_erro": 0.02,
 			"local_atividade": "RUA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"Fim_rotina": {
@@ -41,6 +43,7 @@
 			"duracao": 30,
 			"taxa_erro": 0,
 			"local_atividade": "RUA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"Sair_comodo": {
@@ -50,6 +53,7 @@
 			"duracao": 30,
 			"taxa_erro": 0.05,
 			"local_atividade": "RUA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"Sair_comodo_2h": {
@@ -59,6 +63,7 @@
 			"duracao": 120,
 			"taxa_erro": 0.02,
 			"local_atividade": "RUA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null
 		},
 		"Assistir_tv_30_minutos": {
@@ -68,11 +73,12 @@
 			"duracao": 30,
 			"taxa_erro": 0.08,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"TV": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM" : "OFF"
+				"LAMPADA": ["ON", "D"],
+				"TV": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM" : ["OFF", "D"]
 			}
 		},
 		"Assistir_tv_120_minutos": {
@@ -82,11 +88,12 @@
 			"duracao": 60,
 			"taxa_erro": 0.03,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"TV": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["ON", "D"],
+				"TV": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["OFF", "D"]
 			}
 		},
 		"Ouvir_musica_30_minutos": {
@@ -96,11 +103,12 @@
 			"duracao": 30,
 			"taxa_erro": 0.02,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "ON",
-				"TV": "OFF"
+				"LAMPADA": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["ON", "D"],
+				"TV": ["OFF", "D"]
 			}
 		},
 		"Ouvir_musica_60_minutos": {
@@ -110,11 +118,12 @@
 			"duracao": 60,
 			"taxa_erro": 0.03,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "ON",
-				"TV": "OFF"
+				"LAMPADA": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["ON", "D"],
+				"TV": ["OFF", "D"]
 			}
 		},
 		"Estudar": {
@@ -124,11 +133,12 @@
 			"duracao": 60,
 			"taxa_erro": 0.04,
 			"local_atividade": "SALA",
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF",
-				"TV": "OFF"
+				"LAMPADA": ["ON", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["OFF", "D"],
+				"TV": ["OFF", "D"]
 			}
 		}
 	},

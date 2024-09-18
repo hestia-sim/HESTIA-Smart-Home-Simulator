@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ssedg"
+version = "0.1.0"
+description = ""
+authors = ["mayki <maykioliveira@ufba.br>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.2"
+numpy = "^2.1.1"
+simpy = "^4.1.1"
+networkx = "^3.3"
+simple-term-menu = "^1.6.4"
+matplotlib = "^3.9.2"
+seaborn = "^0.13.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
