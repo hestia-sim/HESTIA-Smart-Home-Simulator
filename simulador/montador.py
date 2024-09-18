@@ -47,8 +47,8 @@ class Montador:
 
     def cria_grafo(self, relacao_nos: dict, comodos: dict) -> Graph:
         grafo = nx.Graph()
-        for no1, no2 in relacao_nos:
-            grafo.add_edge(comodos[no1], comodos[no2])
+        for no1, no2, peso in relacao_nos:
+            grafo.add_edge(comodos[no1], comodos[no2], weight=peso)
         return grafo
 
     def monta_atividade(self, env: Environment, comodos_da_casa: dict, dados_atividades: dict) -> list:

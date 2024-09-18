@@ -198,7 +198,7 @@ class Comodo:
                             with atuador_atual.resource.request() as rq2:
                                 yield rq2
                                 yield self.env.timeout(5)
-                                atuador_atual.mudar(usuario_action, **prederencia_comodo[atuador_atual.tipo])
+                                atuador_atual.mudar(usuario_action, **prederencia_comodo[atuador_atual.tipo], nome_atividade)
                         else:
                             if atuador_atual.status() != valor[0]:
                                 yield from self.inicio_simples(atuador_atual, usuario_action, nome_atividade)
@@ -215,11 +215,11 @@ class Comodo:
             yield self.env.timeout(5)
             atuador_atual.iniciar_uso(usuario_action, nome_atividade)
 
-    def passar(self, usuario: Usuario):
+    def passar(self, usuario: Usuario, distancia:int):
         with self.resource.request() as rq:
             yield rq
             self.ativa_sensor(usuario, usuario.atividade_atual.nome)
-            yield self.env.timeout(random.randint(5, 15))
+            yield self.env.timeout(distancia)
             self.desativa_sensor(usuario, usuario.atividade_atual.nome)
 
     def ativa_sensor(self, usuario_action, nome_atividade:str):
