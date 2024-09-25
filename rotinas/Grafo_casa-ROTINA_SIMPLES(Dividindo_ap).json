@@ -48,14 +48,14 @@
         }
 	},
 	"GRAFO_COMODOS": [
-		["RUA", "CORREDOR"],
-		["CORREDOR", "LAVANDERIA"],
-		["CORREDOR", "BANHEIRO"],
-		["CORREDOR", "COZINHA"],
-		["CORREDOR", "SALA"],
-		["SALA", "QUARTO_01"],
-		["SALA", "QUARTO_02"],
-		["SALA", "VARANDA"]
+		["RUA", "CORREDOR", 3],
+		["CORREDOR", "LAVANDERIA", 6],
+		["CORREDOR", "BANHEIRO", 3],
+		["CORREDOR", "COZINHA", 4],
+		["CORREDOR", "SALA", 2],
+		["SALA", "QUARTO_01", 3],
+		["SALA", "QUARTO_02", 4],
+		["SALA", "VARANDA", 4]
 	],
 	"ATIVIDADES": {
 		"Dormir_quarto_01": {
@@ -64,10 +64,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 60,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "OFF",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["OFF", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["OFF", "D"]
 			},
 			"local_atividade": "QUARTO_01"
 		},
@@ -77,10 +78,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 420,
 			"taxa_erro": 0.008,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "OFF",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["OFF", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["OFF", "D"]
 			},
 			"local_atividade": "QUARTO_01"
 		},
@@ -90,10 +92,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 60,
 			"taxa_erro": 0.0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "OFF",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["OFF", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["OFF", "D"]
 			},
 			"local_atividade": "QUARTO_02"
 		},
@@ -103,10 +106,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 420,
 			"taxa_erro": 0.005,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "OFF",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["OFF", "D"],
+				"AR_CONDICIONADO": ["ON", "D"],
+				"SOM": ["OFF", "D"]
 			},
 			"local_atividade": "QUARTO_02"
 		},
@@ -116,8 +120,9 @@
 			"fim_ocorrencia": null,
 			"duracao": 5,
 			"taxa_erro": 0.1,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON"
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "BANHEIRO"
 		},
@@ -127,8 +132,9 @@
 			"fim_ocorrencia": null,
 			"duracao": 20,
 			"taxa_erro": 0.12,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON"
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "BANHEIRO"
 		},
@@ -138,8 +144,9 @@
 			"fim_ocorrencia": null,
 			"duracao": 3,
 			"taxa_erro": 0.09,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON"
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "BANHEIRO"
 		},
@@ -149,8 +156,9 @@
 			"fim_ocorrencia": null,
 			"duracao": 15,
 			"taxa_erro": 0.1,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON"
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "BANHEIRO"
 		},
@@ -160,8 +168,9 @@
 			"fim_ocorrencia": null,
 			"duracao": 8,
 			"taxa_erro": 0.16,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON"
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "BANHEIRO"
 		},
@@ -171,9 +180,10 @@
 			"fim_ocorrencia": null,
 			"duracao": 25,
 			"taxa_erro": 0.01,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"AR_CONDICIONADO": "OFF",
-				"LAMPADA": "ON"
+				"AR_CONDICIONADO": ["OFF",  "D"],
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "SALA"
 		},
@@ -183,9 +193,10 @@
 			"fim_ocorrencia": null,
 			"duracao": 40,
 			"taxa_erro": 0.02,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"AR_CONDICIONADO": "ON",
-				"LAMPADA": "ON"
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "SALA"
 		},
@@ -195,9 +206,10 @@
 			"fim_ocorrencia": null,
 			"duracao": 40,
 			"taxa_erro": 0.03,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"AR_CONDICIONADO": "ON",
-				"LAMPADA": "ON"
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "SALA"
 		},
@@ -207,8 +219,9 @@
 			"fim_ocorrencia": null,
 			"duracao": 60,
 			"taxa_erro": 0.02,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON"
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "COZINHA"
 		},
@@ -218,8 +231,9 @@
 			"fim_ocorrencia": null,
 			"duracao": 15,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON"
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "COZINHA"
 		},
@@ -229,8 +243,9 @@
 			"fim_ocorrencia": null,
 			"duracao": 2,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON"
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "COZINHA"
 		},
@@ -240,6 +255,7 @@
 			"fim_ocorrencia": null,
 			"duracao": 180,
 			"taxa_erro": 0.1,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null,
 			"local_atividade": "RUA"
 		},
@@ -249,6 +265,7 @@
 			"fim_ocorrencia": null,
 			"duracao": 180,
 			"taxa_erro": 0.1,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null,
 			"local_atividade": "RUA"
 		},
@@ -258,10 +275,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 30,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "ON"
+				"LAMPADA": ["ON",  "D"],
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"SOM": ["ON",  "D"]
 			},
 			"local_atividade": "QUARTO_01"
 		},
@@ -272,10 +290,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 60,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "ON"
+				"LAMPADA": ["ON",  "D"],
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"SOM": ["ON",  "D"]
 			},
 			"local_atividade": "QUARTO_01"
 		},
@@ -285,6 +304,7 @@
 			"fim_ocorrencia": null,
 			"duracao": 120,
 			"taxa_erro": 0.3,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null,
 			"local_atividade": "RUA"
 		},
@@ -294,6 +314,7 @@
 			"fim_ocorrencia": null,
 			"duracao": 60,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null,
 			"local_atividade": "RUA"
 		},
@@ -303,6 +324,7 @@
 			"fim_ocorrencia": null,
 			"duracao": 240,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": null,
 			"local_atividade": "RUA"
 		},
@@ -312,10 +334,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 5,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["ON",  "D"],
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"SOM": ["OFF",  "D"]
 			},
 			"local_atividade": "QUARTO_01"
 		},
@@ -325,10 +348,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 5,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["ON",  "D"],
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"SOM": ["OFF",  "D"]
 			},
 			"local_atividade": "QUARTO_02"
 		},
@@ -338,8 +362,9 @@
 			"fim_ocorrencia": null,
 			"duracao": 90,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON"
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "LAVANDERIA"
 		},
@@ -349,10 +374,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 60,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["ON",  "D"],
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"SOM": ["OFF",  "D"]
 			},
 			"local_atividade": "QUARTO_02"
 		},
@@ -362,9 +388,10 @@
 			"fim_ocorrencia": null,
 			"duracao": 60,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"AR_CONDICIONADO": "ON",
-				"LAMPADA": "ON"
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "SALA"
 		},
@@ -374,9 +401,10 @@
 			"fim_ocorrencia": null,
 			"duracao": 120,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"AR_CONDICIONADO": "ON",
-				"LAMPADA": "ON"
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "SALA"
 		},
@@ -386,9 +414,10 @@
 			"fim_ocorrencia": null,
 			"duracao": 180,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"AR_CONDICIONADO": "ON",
-				"LAMPADA": "ON"
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"LAMPADA": ["ON",  "D"]
 			},
 			"local_atividade": "SALA"
 		},
@@ -398,10 +427,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 60,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["ON",  "D"],
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"SOM": ["OFF",  "D"]
 			},
 			"local_atividade": "QUARTO_01"
 		},
@@ -411,10 +441,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 120,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["ON",  "D"],
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"SOM": ["OFF",  "D"]
 			},
 			"local_atividade": "QUARTO_01"
 		},
@@ -424,10 +455,11 @@
 			"fim_ocorrencia": null,
 			"duracao": 180,
 			"taxa_erro": 0,
+			"atividades_associadas": {},
 			"lista_atuadores_atividade": {
-				"LAMPADA": "ON",
-				"AR_CONDICIONADO": "ON",
-				"SOM": "OFF"
+				"LAMPADA": ["ON",  "D"],
+				"AR_CONDICIONADO": ["ON",  "D"],
+				"SOM": ["OFF",  "D"]
 			},
 			"local_atividade": "QUARTO_01"
 		}

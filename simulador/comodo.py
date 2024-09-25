@@ -193,12 +193,12 @@ class Comodo:
                 usuario_prioritario = self.usuario_prioritario()
                 if len(usuarios_comodo) > 1 or usuario_prioritario == usuario_action:
                     if self.nome in usuario_action.preferencia:
-                        prederencia_comodo = usuario_action.preferencia[self.nome]
-                        if atuador_atual.tipo in prederencia_comodo:
+                        preferencia_comodo = usuario_action.preferencia[self.nome]
+                        if atuador_atual.tipo in preferencia_comodo:
                             with atuador_atual.resource.request() as rq2:
                                 yield rq2
                                 yield self.env.timeout(5)
-                                atuador_atual.mudar(usuario_action, **prederencia_comodo[atuador_atual.tipo], nome_atividade)
+                                atuador_atual.mudar(usuario_action, nome_atividade=nome_atividade, **preferencia_comodo[atuador_atual.tipo])
                         else:
                             if atuador_atual.status() != valor[0]:
                                 yield from self.inicio_simples(atuador_atual, usuario_action, nome_atividade)

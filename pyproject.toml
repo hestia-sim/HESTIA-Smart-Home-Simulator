@@ -14,6 +14,7 @@ networkx = "^3.3"
 simple-term-menu = "^1.6.4"
 matplotlib = "^3.9.2"
 seaborn = "^0.13.2"
+scipy = "^1.14.1"
 
 
 [build-system]
