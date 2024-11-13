@@ -1,5 +1,6 @@
 import copy
 import random
+import numpy as np
 from datetime import timedelta
 
 import simpy
@@ -42,8 +43,10 @@ class Comodo:
                 resto_duracao = duracao
 
                 for b in range(quantidade_blocos):
-                    atividade_para_sorteio = [None] + list(atividades_associadas.keys())
-                    probabilidades = [(1-sum(list(atividades_associadas.values())))] + list(atividades_associadas.values())
+
+                    atividade_para_sorteio = [None] + list(atividades_associadas.keys()) # [None, BEBER_AGUA, USAR_BANHEIRO, IR_NA_VARANDA]
+                    percentual_atividade_Associada = np.array(list(atividades_associadas.values())) / quantidade_blocos
+                    probabilidades = [(1-sum(percentual_atividade_Associada))] + (percentual_atividade_Associada.tolist()) # [0.88, 0.05, 0.02, 0.05]
                     atividade_sorteada = random.choices(atividade_para_sorteio, weights=probabilidades, k=1)[0]
                     if atividade_sorteada is not None:
                         atividade_secundaria = UsuariosHelp.pega_atividade(atividade_sorteada)
