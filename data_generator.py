@@ -1,9 +1,15 @@
 import json
+import math
 import sys
 import random
+import cProfile
+from datetime import datetime
 
+import pandas as pd
 import simpy
 import os
+
+from bigO import BigO
 
 from menu import menu
 from simulador.helps.gravar_dados import GravarDados
@@ -120,10 +126,32 @@ def generate_data_debug(tipo_selecionado, dias_simulacao, nome_rotina):
         print_infos(env, dias_simulacao, nome_rotina, nome_arquivo)
 
 
-random.seed(123)
+# random.seed(123)
 if __name__ == "__main__":
     tipos = ['completo', 'simples', 'back']
     dias_simulacao = 14
-    nome_rotina = "Grafo_teste-grupo(3usuarios)"
+    nome_rotina = "Cenario_validacao_Artigo(1usuarios-casa-mayki)"
 
-    generate_data_debug(tipos[0], dias_simulacao, nome_rotina)
+    total = {}
+
+    with open('teste_tempo.csv', 'a') as f:
+
+        for dias in range(1, 9000, 10):
+            tempo = []
+            for i in range(3):
+                tempo_inicio = datetime.now()
+                generate_data_debug(tipos[0], dias, nome_rotina)
+                tempo_fim = datetime.now()
+                tempo.append((tempo_fim - tempo_inicio).total_seconds())
+            # print(f"[{dias}] = {sum(tempo)/3}")
+            # total[dias] = sum(tempo)/3
+            print(f"{dias}, {sum(tempo) / 3}\n")
+            f.write(f"{dias}, {sum(tempo)/3}\n")
+        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        # print(total)
+        # pd.DataFrame([total]).T.to_csv('teste_tempo.csv')
+
+
+
+
+
