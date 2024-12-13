@@ -42,14 +42,16 @@ class Comodo:
                 quantidade_blocos = int(duracao/600) #divide em blocos de 10 minutos
                 resto_duracao = duracao
 
+                atividade_para_sorteio = [None] + list(atividades_associadas.keys())
+                associadas_proba = list(atividades_associadas.values())
+                expoentes = dict(zip(atividades_associadas.keys(), [1] * len(associadas_proba)))
                 for b in range(quantidade_blocos):
-
-                    atividade_para_sorteio = [None] + list(atividades_associadas.keys()) # [None, BEBER_AGUA, USAR_BANHEIRO, IR_NA_VARANDA]
-                    percentual_atividade_Associada = np.array(list(atividades_associadas.values())) / quantidade_blocos
-                    probabilidades = [(1-sum(percentual_atividade_Associada))] + (percentual_atividade_Associada.tolist()) # [0.88, 0.05, 0.02, 0.05]
-                    atividade_sorteada = random.choices(atividade_para_sorteio, weights=probabilidades, k=1)[0]
+                    geral_proba = [1 - sum(associadas_proba)] + associadas_proba
+                    atividade_sorteada = random.choices(atividade_para_sorteio, weights=geral_proba, k=1)[0]
                     if atividade_sorteada is not None:
                         atividade_secundaria = UsuariosHelp.pega_atividade(atividade_sorteada)
+                        expoentes[atividade_sorteada] += 1
+                        associadas_proba = [x ** y for x, y in zip(atividades_associadas.values(), expoentes.values())]
                         # atividade_secundaria.duracao = 600
                         resto_duracao -= atividade_secundaria.duracao
                         # atividade_secundaria.secundaria = True
