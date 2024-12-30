@@ -3,33 +3,33 @@
   	<h1>Grafo_casa-ROTINA_SIMPLES(2usuarios)</h1>
 </div>
 
-<h2> :house: Cômodos e Equipamentos</h2>
-A casa é composta por vários cômodos equipados com dispositivos inteligentes, incluindo:
+<h2> :house: Rooms and Equipment</h2>
+The house is made up of several rooms equipped with smart devices, including:
 
-* **Sala:** TV, ar-condicionado, lâmpada e sensor de presença.
-* **Escritório:** Lâmpada, ar-condicionado e sensor de presença.
-* **Banheiros (2):** Lâmpadas e  sensor de presença.
-* **Quartos (2):** Lâmpadas, ar-condicionado e dispositivos como TV ou som.
-* **Cozinha:** Lâmpada, cafeteira e sensor de presença.
-* **Varanda:** Lâmpada e sensor de presença.
-* **Lavanderia:** Lâmpada e sensor de presença.
-* **Corredor:** Lâmpada e sensor de presença.
-
-
-<h2> :muscle: Atividades Específicas</h2>
-
-* **Higiene pessoal:** Escovar os dentes, tomar banho e usar o banheiro.
-* **Refeições:** Café da manhã, almoço e jantar na cozinha.
-* **Trabalho remoto:** Realizado no escritório com ar-condicionado e lâmpada ligados.
-* **Entretenimento:** Assistir TV na sala ou ouvir música no quarto 02.
-* **Exercício e lazer:** Passeios externos programados durante o fim de semana.
-* **Estudos:** Podem ser realizados dentro da casa ou em locais externos.
+* **Living room:** TV, air conditioning, lamp and motion sensor.
+* **Office:** Lamp, air conditioning and motion sensor.
+* **Bathrooms (2):** Lamps and motion sensor.
+* **Bedrooms (2):** Lamps, air conditioning and devices such as TV or sound.
+* **Kitchen:** Lamp, coffee maker and motion sensor.
+* **Balcony:** Lamp and motion sensor.
+* **Laundry room:** Lamp and motion sensor.
+* **Hallway:** Lamp and motion sensor.
 
 
+<h2> :muscle: Specific Activities</h2>
 
-<h2> :eyes: Descrição das Atividades e Interações</h2>
-Gustavo, que trabalha remotamente, inicia seu dia acordando no Quarto 01 e seguindo para o Banheiro 02 para realizar a higiene pessoal. Em seguida, ele toma café na cozinha, onde a cafeteira é ativada automaticamente, antes de iniciar seu expediente no escritório. Durante o trabalho, Gustavo mantém o ar-condicionado e a iluminação ligados para criar um ambiente confortável. Ele pausa ao meio-dia para almoçar na cozinha e retorna ao escritório no período da tarde. No fim do dia, Gustavo prepara o jantar, assiste TV na sala para relaxar e encerra a noite tomando banho e dormindo no Quarto 01, com o ar-condicionado ajustado para sua temperatura preferida.
+* **Personal hygiene:** Brushing teeth, taking a shower and using the bathroom.
+* **Meals:** Breakfast, lunch and dinner in the kitchen.
+* **Remote work:** Carried out in the office with the air conditioning and lamp on.
+* **Entertainment:** Watching TV in the living room or listening to music in bedroom 02.
+* **Exercise and leisure:** Scheduled outdoor trips during the weekend.
+* **Studying:** Can be done inside the house or outside.
 
-Amanda, por outro lado, possui uma rotina diferente, pois trabalha fora de casa. Ela acorda no mesmo quarto que Gustavo, compartilha o banheiro para higiene matinal e toma café antes de sair para o trabalho. Ao retornar no início da noite, Amanda janta na cozinha e aproveita momentos de lazer assistindo TV na sala. Após relaxar, ela toma banho no Banheiro 02 e dorme no Quarto 01, configurando o ar-condicionado para uma temperatura mais alta e no modo automático. Nos finais de semana, Amanda e Gustavo seguem rotinas mais flexíveis, incluindo atividades como passeios, cozinhar juntos, lavar roupas na lavanderia e assistir TV por mais tempo.
 
-As interações entre os moradores refletem um uso eficiente e compartilhado dos espaços e dispositivos da casa. Enquanto Gustavo utiliza o escritório para trabalhar durante o dia, Amanda aproveita a sala para lazer no período noturno. Ambos compartilham o banheiro e a cozinha sem conflitos, com horários bem distribuídos. Durante os fins de semana, a convivência se intensifica, com atividades colaborativas e momentos de relaxamento.
+
+<h2> :eyes:Description of Activities and Interactions</h2>
+Gustavo, who works remotely, starts his day by waking up in Bedroom 01 and heading to Bathroom 02 to take care of his personal hygiene. He then has coffee in the kitchen, where the coffee maker turns on automatically, before starting his workday at the office. During work, Gustavo keeps the air conditioning and lighting on to create a comfortable environment. He takes a break at noon to have lunch in the kitchen and returns to the office in the afternoon. At the end of the day, Gustavo prepares dinner, watches TV in the living room to relax and ends the night by taking a shower and sleeping in Bedroom 01, with the air conditioning set to his preferred temperature.
+
+Amanda, on the other hand, has a different routine because she works away from home. She wakes up in the same room as Gustavo, shares the bathroom for morning hygiene and has coffee before leaving for work. When she returns in the early evening, Amanda has dinner in the kitchen and enjoys leisure time watching TV in the living room. After relaxing, she takes a shower in Bathroom 02 and sleeps in Bedroom 01, setting the air conditioning to a higher temperature and on automatic mode. On weekends, Amanda and Gustavo follow more flexible routines, including activities such as going for walks, cooking together, washing clothes in the laundry room and watching TV for longer periods of time.
+
+The interactions between the residents reflect an efficient and shared use of the spaces and devices in the house. While Gustavo uses the office to work during the day, Amanda uses the living room for leisure in the evening. They both share the bathroom and kitchen without conflict, with well-distributed schedules. During the weekends, the coexistence intensifies, with collaborative activities and moments of relaxation.
