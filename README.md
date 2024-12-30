@@ -6,7 +6,7 @@
 	<p align="center">
 		<a href="#sobre">About the generator</a> •
         	<a href="#requirements">Requirements</a> •
-        	<a href="#installation">Instalação</a> •
+        	<a href="#installation">Installation</a> •
 		<a href="#scenarios">Scenarios</a> •
 		<a href="#responsible">Responsible</a>
 	</p>
@@ -68,6 +68,7 @@ Some basic routines were created that can be used to produce data. These routine
 Gustavo, Amanda
 
 *SIMPLIFIED ROUTINE:*
+
 * Gustavo: Remote work (8:00-12:00, 14:00-17:00)
 * Amanda: In-person work (leaves 7:00, arrives 18:00)
 * Weekends: Varied routine (going out, doing laundry)
@@ -86,6 +87,7 @@ Sleep, Poop, Pee, Take a shower, Brush your teeth, Have breakfast, Have lunch, H
 Andre, Vinicius
 
 *SIMPLIFIED ROUTINE:*
+
 * Andre: In-person work (leaves 8:00, arrives 13:00)
 * Andre: In-person work (leaves 14:00, arrives 17:00)
 * Andre: on Tuesdays and Thursdays, arrives at 19:00
@@ -97,7 +99,6 @@ Andre, Vinicius
 
 
 *ACTIVITIES:*
-
 Sleep, Poop, Pee, Take a shower, Brush your teeth, Have breakfast, Have lunch, Have dinner, Cook, Drink water, Work outside, Listen to music, Go for a walk, Study, Clean the house
 
 [Full description here.](./doc/Grafo_casa-ROTINA_SIMPLES(Dividindo_ap).md)
@@ -108,6 +109,7 @@ Sleep, Poop, Pee, Take a shower, Brush your teeth, Have breakfast, Have lunch, H
 Gustavo, Amanda, Vitor
 
 *SIMPLIFIED ROUTINE:*
+
 * Gustavo: Goes to the living room to watch TV.
 * Gustavo: Leaves the room occasionally.
 * Amanda: Prefers to watch TV for long periods and listen to music.
@@ -126,6 +128,7 @@ Sleep, Watch TV, Listen to music, Study, Leave the room, Get home.
 Mayki
 
 *SIMPLIFIED ROUTINE:*
+
 * Mayki: Uses the computer in the bedroom at different times of the day and night.
 * Mayki: Takes short breaks and leaves the room.
 * Mayki: Prepares breakfast, brushes teeth and performs simple activities such as “doing nothing”.
