@@ -6,16 +6,17 @@
 <h2> :house: Cômodos e Equipamentos</h2>
 A casa possui dois ambientes principais, com dispositivos automatizados para monitoramento e controle:
 
-**Quarto:** Equipado com lâmpada, sensores de presença e duas tomadas inteligentes (Plug 01 e Plug 02).
-**Rua:** Espaço externo para entradas e saídas, sem dispositivos automatizados.
+* **Quarto:** Equipado com lâmpada, sensores de presença e duas tomadas inteligentes (Plug 01 e Plug 02).
+* **Rua:** Espaço externo para entradas e saídas, sem dispositivos automatizados.
 
 
 <h2> :muscle: Atividades Específicas</h2>
-**Rotinas Diárias:** Preparar café da manhã, escovar os dentes e beber água.
-**Uso do Computador:** Sessões de trabalho ou estudo divididas em períodos da manhã, tarde e noite.
-**Limpeza e Organização:** Atividades como limpar o quarto.
-**Relaxamento e Lazer:** Inclui períodos de descanso e tarefas leves.
-**Finais de Rotina:** Encerramento das atividades com tempo de inatividade no quarto.
+
+* **Rotinas Diárias:** Preparar café da manhã, escovar os dentes e beber água.
+* **Uso do Computador:** Sessões de trabalho ou estudo divididas em períodos da manhã, tarde e noite.
+* **Limpeza e Organização:** Atividades como limpar o quarto.
+* **Relaxamento e Lazer:** Inclui períodos de descanso e tarefas leves.
+* **Finais de Rotina:** Encerramento das atividades com tempo de inatividade no quarto.
 
 
 <h2> :eyes: Descrição das Atividades e Interações</h2>
