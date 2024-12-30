@@ -3,24 +3,24 @@
   	<h1>Cenario_validacao_Artigo(1usuarios-casa-mayki)</h1>
 </div>
 
-<h2> :house: Cômodos e Equipamentos</h2>
-A casa possui dois ambientes principais, com dispositivos automatizados para monitoramento e controle:
+<h2> :house: Rooms and Equipment</h2>
+The house has two main areas, with automated devices for monitoring and control:
 
-* **Quarto:** Equipado com lâmpada, sensores de presença e duas tomadas inteligentes (Plug 01 e Plug 02).
-* **Rua:** Espaço externo para entradas e saídas, sem dispositivos automatizados.
-
-
-<h2> :muscle: Atividades Específicas</h2>
-
-* **Rotinas Diárias:** Preparar café da manhã, escovar os dentes e beber água.
-* **Uso do Computador:** Sessões de trabalho ou estudo divididas em períodos da manhã, tarde e noite.
-* **Limpeza e Organização:** Atividades como limpar o quarto.
-* **Relaxamento e Lazer:** Inclui períodos de descanso e tarefas leves.
-* **Finais de Rotina:** Encerramento das atividades com tempo de inatividade no quarto.
+* **Bedroom:** Equipped with a light, motion sensors and two smart sockets (Plug 01 and Plug 02).
+* **Street:** External space for entrances and exits, without automated devices.
 
 
-<h2> :eyes: Descrição das Atividades e Interações</h2>
-Mayki, o único morador, possui uma rotina estruturada, alternando entre períodos de trabalho, descanso e tarefas domésticas. Ele inicia o dia utilizando o computador no quarto, alternando com pausas para beber água, escovar os dentes e preparar café da manhã. As atividades são intercaladas com pequenos intervalos de descanso e momentos dedicados a organização do ambiente.
-Durante a manhã, Mayki usa o computador por cerca de 30 a 60 minutos, seguido por pequenas saídas para realizar tarefas rápidas, como beber água ou ir à varanda. À tarde, ele continua o uso do computador para estudos ou trabalho, mantendo os dispositivos ativados.
-À noite, Mayki alterna entre períodos de uso do computador e momentos de relaxamento. Em alguns dias, ele estende o uso do computador até a madrugada, retornando ao descanso logo em seguida.
-Nos finais de semana, sua rotina é mais flexível, com sessões mais longas no computador e períodos adicionais de descanso. As atividades variam entre organização do espaço e uso dos dispositivos para lazer e tarefas pessoais.
+<h2> :muscle: Specific Activities</h2>
+
+* **Daily Routines:** Prepare breakfast, brush teeth, and drink water.
+* **Computer Use:** Work or study sessions divided into morning, afternoon, and evening periods.
+* **Cleaning and Organization:** Activities such as cleaning the room.
+* **Relaxation and Leisure:** Includes rest periods and light tasks.
+* **End of Routine:** Closing of activities with downtime in the room.
+
+
+<h2> :eyes: Description of Activities and Interactions</h2>
+Mayki, the only resident, has a structured routine, alternating between periods of work, rest and household chores. He starts the day using the computer in his room, alternating with breaks to drink water, brush his teeth and prepare breakfast. The activities are interspersed with short rest breaks and moments dedicated to organizing the space.
+In the morning, Mayki uses the computer for about 30 to 60 minutes, followed by short trips to perform quick tasks, such as drinking water or going to the balcony. In the afternoon, he continues to use the computer for studies or work, keeping the devices activated.
+In the evening, Mayki alternates between periods of computer use and moments of relaxation. On some days, he extends his computer use until the early hours of the morning, returning to rest soon after.
+On weekends, his routine is more flexible, with longer sessions on the computer and additional periods of rest. The activities vary between organizing the space and using the devices for leisure and personal tasks.
