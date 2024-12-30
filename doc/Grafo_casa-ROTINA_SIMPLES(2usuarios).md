@@ -6,23 +6,24 @@
 <h2> :house: Cômodos e Equipamentos</h2>
 A casa é composta por vários cômodos equipados com dispositivos inteligentes, incluindo:
 
-**Sala:** TV, ar-condicionado, lâmpada e sensor de presença.
-**Escritório:** Lâmpada, ar-condicionado e sensor de presença.
-**Banheiros (2):** Lâmpadas e  sensor de presença.
-**Quartos (2):** Lâmpadas, ar-condicionado e dispositivos como TV ou som.
-**Cozinha:** Lâmpada, cafeteira e sensor de presença.
-**Varanda:** Lâmpada e sensor de presença.
-**Lavanderia:** Lâmpada e sensor de presença.
-**Corredor:** Lâmpada e sensor de presença.
+* **Sala:** TV, ar-condicionado, lâmpada e sensor de presença.
+* **Escritório:** Lâmpada, ar-condicionado e sensor de presença.
+* **Banheiros (2):** Lâmpadas e  sensor de presença.
+* **Quartos (2):** Lâmpadas, ar-condicionado e dispositivos como TV ou som.
+* **Cozinha:** Lâmpada, cafeteira e sensor de presença.
+* **Varanda:** Lâmpada e sensor de presença.
+* **Lavanderia:** Lâmpada e sensor de presença.
+* **Corredor:** Lâmpada e sensor de presença.
 
 
 <h2> :muscle: Atividades Específicas</h2>
-**Higiene pessoal:** Escovar os dentes, tomar banho e usar o banheiro.
-**Refeições:** Café da manhã, almoço e jantar na cozinha.
-**Trabalho remoto:** Realizado no escritório com ar-condicionado e lâmpada ligados.
-**Entretenimento:** Assistir TV na sala ou ouvir música no quarto 02.
-**Exercício e lazer:** Passeios externos programados durante o fim de semana.
-**Estudos:** Podem ser realizados dentro da casa ou em locais externos.
+
+* **Higiene pessoal:** Escovar os dentes, tomar banho e usar o banheiro.
+* **Refeições:** Café da manhã, almoço e jantar na cozinha.
+* **Trabalho remoto:** Realizado no escritório com ar-condicionado e lâmpada ligados.
+* **Entretenimento:** Assistir TV na sala ou ouvir música no quarto 02.
+* **Exercício e lazer:** Passeios externos programados durante o fim de semana.
+* **Estudos:** Podem ser realizados dentro da casa ou em locais externos.
 
 
 
