@@ -6,22 +6,23 @@
 <h2> :house: Cômodos e Equipamentos</h2>
 A casa possui diversos cômodos equipados com dispositivos inteligentes, incluindo:
 
-**Sala:** Ar-condicionado, lâmpada e sensor de presença.
-**Banheiro:** Lâmpada e sensor de presença.
-**Quartos (2):** Lâmpadas, ar-condicionado, som e sensores de presença.
-**Cozinha:** Lâmpada e sensor de presença.
-**Varanda:** Lâmpada e sensor de presença.
-**Lavanderia:** Lâmpada e sensor de presença.
-**Corredor:** Lâmpada e sensor de presença
+* **Sala:** Ar-condicionado, lâmpada e sensor de presença.
+* **Banheiro:** Lâmpada e sensor de presença.
+* **Quartos (2):** Lâmpadas, ar-condicionado, som e sensores de presença.
+* **Cozinha:** Lâmpada e sensor de presença.
+* **Varanda:** Lâmpada e sensor de presença.
+* **Lavanderia:** Lâmpada e sensor de presença.
+* **Corredor:** Lâmpada e sensor de presença
 
 
 <h2> :muscle: Atividades Específicas</h2>
-**Higiene pessoal:** Escovar os dentes, tomar banho e usar o banheiro.
-**Refeições:** Café da manhã, almoço e jantar na cozinha ou na sala.
-**Trabalho e estudo:** Uso do computador nos quartos ou na sala.
-**Entretenimento:** Ouvir música, assistir TV e passear.
-**Domésticas:** Lavar roupas na lavanderia.
-**Fim de semana:** Passeios e descanso com atividades flexíveis.
+
+* **Higiene pessoal:** Escovar os dentes, tomar banho e usar o banheiro.
+* **Refeições:** Café da manhã, almoço e jantar na cozinha ou na sala.
+* **Trabalho e estudo:** Uso do computador nos quartos ou na sala.
+* **Entretenimento:** Ouvir música, assistir TV e passear.
+* **Domésticas:** Lavar roupas na lavanderia.
+* **Fim de semana:** Passeios e descanso com atividades flexíveis.
 
 
 
