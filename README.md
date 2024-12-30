@@ -5,9 +5,10 @@
 <div>
 	<p align="center">
 		<a href="#sobre">About the generator</a> •
-        <a href="#requisitos">Requirements</a> •
-        <a href="#instalacao">Instalação</a> •
-		<a href="#cenarios">Cenários</a>
+        	<a href="#requirements">Requirements</a> •
+        	<a href="#installation">Instalação</a> •
+		<a href="#scenarios">Scenarios</a> •
+		<a href="#responsible">Responsible</a>
 	</p>
 </div>
 
@@ -25,13 +26,13 @@ The HESTIA application is a system designed to provide accurate and consistent d
 
 * **Activity Period Variations:** The system is flexible enough to accommodate natural variations in residents' activity schedules. For example, wake-up or sleep times, or moments for daily activities, may vary from day to day. The application is capable of accommodating these variations to produce data that accurately represents residents' real behavior.
 
-<h2 id="requisitos"> :toolbox: Requirements</h2>
+<h2 id="requirements"> :toolbox: Requirements</h2>
 
 * Python 3.10
 * Poetry
 
 
-<h2 id="instalacao"> :books: Installation and data generation</h2>
+<h2 id="installation"> :books: Installation and data generation</h2>
 
 First of all, clone the HESTIA project repository to your machine. To do this, run the following commands in the terminal.
 
@@ -59,7 +60,7 @@ When running it, you will be asked:
 From this, you will have either a Simple or Complete data output. The generated data is stored in the _**/dados**_ folder.
 
 
-<h2 id="cenarios">:gear: Scenarios</h2>
+<h2 id="scenarios">:gear: Scenarios</h2>
 Some basic routines were created that can be used to produce data. These routines are:
 
 ### Grafo_casa-ROTINA_SIMPLES(2usuarios)
@@ -76,7 +77,7 @@ Gustavo, Amanda
 *ACTIVITIES:*
 Sleep, Poop, Pee, Take a shower, Brush your teeth, Have breakfast, Have lunch, Have dinner, Cook, Drink water, Work from home, Work outside, Watch TV, Listen to music, Go for a walk, Study, Do laundry, Clean the house
 
-[Descrição completa aqui.]()
+[Full description here.](./doc/Grafo_casa-ROTINA_SIMPLES(2usuarios).md)
 
 
 ### Grafo_casa-ROTINA_SIMPLES(Dividindo_ap)
@@ -99,7 +100,7 @@ Andre, Vinicius
 
 Sleep, Poop, Pee, Take a shower, Brush your teeth, Have breakfast, Have lunch, Have dinner, Cook, Drink water, Work outside, Listen to music, Go for a walk, Study, Clean the house
 
-[Descrição completa aqui.]()
+[Full description here.](./doc/Grafo_casa-ROTINA_SIMPLES(Dividindo_ap).md)
 
 
 ### Grafo_teste-grupo(3usuarios)
@@ -117,7 +118,7 @@ Gustavo, Amanda, Vitor
 *ACTIVITIES:*
 Sleep, Watch TV, Listen to music, Study, Leave the room, Get home.
 
-[Descrição completa aqui.]()
+[Full description here.](./doc/Grafo_teste-grupo(3usuarios).md)
 
 
 ### Cenario_validacao_Artigo(1usuarios-casa-mayki)
@@ -135,10 +136,10 @@ Mayki
 *ACTIVITIES:*
 Sleep, Use the computer, Brush teeth, Prepare breakfast, Do nothing, Leave the room, Go to the balcony, Drink water, Use the bathroom, Prepare a snack, Clean the room.
 
-[Descrição completa aqui.]()
+[Full description here.](./doc/Cenario_validacao_Artigo(1usuarios-casa-mayki).md)
 
 
-<h2 id="cenarios">:office: Responsible</h2>
+<h2 id="responsible">:office: Responsible</h2>
 For more details, contact one of the responsible researchers:
 maykioliveira@ufba.br - Mayki Santos (researcher/developer)
 denis.boaventura@ufba.br  - Denis Robson (researcher/developer)
