@@ -3,30 +3,30 @@
   	<h1>Grafo_casa-ROTINA_SIMPLES(Dividindo_ap)</h1>
 </div>
 
-<h2> :house: Cômodos e Equipamentos</h2>
-A casa possui diversos cômodos equipados com dispositivos inteligentes, incluindo:
+<h2> :house: Rooms and Equipment</h2>
+The house has several rooms equipped with smart devices, including:
 
-* **Sala:** Ar-condicionado, lâmpada e sensor de presença.
-* **Banheiro:** Lâmpada e sensor de presença.
-* **Quartos (2):** Lâmpadas, ar-condicionado, som e sensores de presença.
-* **Cozinha:** Lâmpada e sensor de presença.
-* **Varanda:** Lâmpada e sensor de presença.
-* **Lavanderia:** Lâmpada e sensor de presença.
-* **Corredor:** Lâmpada e sensor de presença
-
-
-<h2> :muscle: Atividades Específicas</h2>
-
-* **Higiene pessoal:** Escovar os dentes, tomar banho e usar o banheiro.
-* **Refeições:** Café da manhã, almoço e jantar na cozinha ou na sala.
-* **Trabalho e estudo:** Uso do computador nos quartos ou na sala.
-* **Entretenimento:** Ouvir música, assistir TV e passear.
-* **Domésticas:** Lavar roupas na lavanderia.
-* **Fim de semana:** Passeios e descanso com atividades flexíveis.
+* **Living room:** Air conditioning, lamp and motion sensor.
+* **Bathroom:** Lamp and motion sensor.
+* **Bedrooms (2):** Lamps, air conditioning, sound and motion sensors.
+* **Kitchen:** Lamp and motion sensor.
+* **Balcony:** Lamp and motion sensor.
+* **Laundry room:** Lamp and motion sensor.
+* **Hallway:** Lamp and motion sensor
 
 
+<h2> :muscle: Specific Activities</h2>
 
-<h2> :eyes: Descrição das Atividades e Interações</h2>
-André segue uma rotina organizada. Ele acorda no Quarto 01, usa o banheiro para higiene pessoal e toma café na sala. Durante o dia, trabalha fora, retornando para o almoço. No período da tarde, ele realiza mais trabalho ou estudos, alternando entre o quarto e a sala. À noite, André prepara o jantar, usa o computador e termina o dia tomando banho e dormindo no Quarto 01.
-Vinícius possui horários mais flexíveis. Ele acorda no Quarto 02, realiza a higiene no banheiro e toma café na sala. Passa parte do dia estudando ou usando o computador no quarto e na sala. Também realiza tarefas como lavar roupa e preparar refeições. À noite, Vinícius relaxa ouvindo música, toma banho e dorme no Quarto 02.
-Nos finais de semana, ambos os moradores aproveitam o tempo livre para passeios, atividades domésticas e momentos de lazer. A casa ajusta os dispositivos automaticamente para criar ambientes confortáveis e eficientes, adaptando-se às preferências individuais de cada morador
+* **Personal hygiene:** Brushing teeth, taking a shower and using the bathroom.
+* **Meals:** Breakfast, lunch and dinner in the kitchen or living room.
+* **Work and study:** Using the computer in the bedrooms or living room.
+* **Entertainment:** Listening to music, watching TV and going for walks.
+* **Household chores:** Washing clothes in the laundry room.
+* **Weekends:** Outings and relaxing with flexible activities.
+
+
+
+<h2> :eyes: Description of Activities and Interactions</h2>
+André follows an organized routine. He wakes up in Room 01, uses the bathroom for personal hygiene and has breakfast in the living room. During the day, he works outside, returning for lunch. In the afternoon, he does more work or studies, alternating between the bedroom and the living room. At night, André prepares dinner, uses the computer and ends the day by taking a shower and sleeping in Room 01.
+Vinícius has more flexible hours. He wakes up in Room 02, takes care of himself in the bathroom and has breakfast in the living room. He spends part of the day studying or using the computer in the bedroom and living room. He also does tasks such as washing clothes and preparing meals. At night, Vinícius relaxes listening to music, takes a shower and sleeps in Room 02.
+On weekends, both residents enjoy their free time for outings, household chores and leisure time. The house automatically adjusts the devices to create comfortable and efficient environments, adapting to the individual preferences of each resident.
