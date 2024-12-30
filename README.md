@@ -144,9 +144,12 @@ Sleep, Use the computer, Brush teeth, Prepare breakfast, Do nothing, Leave the r
 
 <h2 id="responsible">:office: Responsible</h2>
 For more details, contact one of the responsible researchers:
-maykioliveira@ufba.br - Mayki Santos (researcher/developer)
-denis.boaventura@ufba.br  - Denis Robson (researcher/developer)
 
+* maykioliveira@ufba.br - Mayki Santos (researcher/developer)
+* denis.boaventura@ufba.br  - Denis Robson (researcher/developer)
+* joelpires@ufba.br - Joel (researcher)
+* eduardoferreira@ufba.br - Eduardo Ferreira (researcher)
+* isaque.copque@ufba.br - Isaque(researcher)
 
 
 
