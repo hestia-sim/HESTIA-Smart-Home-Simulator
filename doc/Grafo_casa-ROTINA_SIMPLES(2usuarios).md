@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://github.com/SSEDG/SSEDG/blob/main/doc/img/logo_ssedg2.png?raw=true" alt="logo" width=400px>
+	<img src="https://github.com/hestia-sim/HESTIA-Smart-Home-Simulator/blob/main/doc/img/logo_hestia.png?raw=true" alt="logo" width=400px>
   	<h1>Grafo_casa-ROTINA_SIMPLES(2usuarios)</h1>
 </div>
 
