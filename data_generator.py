@@ -9,8 +9,6 @@ import pandas as pd
 import simpy
 import os
 
-from bigO import BigO
-
 from menu import menu
 from simulador.helps.gravar_dados import GravarDados
 from simulador.helps.converter import Converter
