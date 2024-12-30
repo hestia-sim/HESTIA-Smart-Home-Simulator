@@ -4,35 +4,36 @@
 </div>
 <div>
 	<p align="center">
-		<a href="#sobre">Sobre</a> •
-    <a href="#instalacao">Instalação</a> •
-		<a href="#requisitos">Requisitos</a> •
+		<a href="#sobre">About the generator</a> •
+        <a href="#requisitos">Requirements</a> •
+        <a href="#instalacao">Instalação</a> •
 		<a href="#cenarios">Cenários</a>
 	</p>
 </div>
 
-<h2 id="sobre"> :eyes: Sobre</h2>
+<h2 id="sobre"> :eyes: About the generator</h2>
 
-A aplicação SSEDG é um sistema projetado para fornecer dados precisos e consistentes de utilização de dispositivos em ambientes compartilhados, como casas com vários moradores. O sistema combina diferenes funcionalidaes para criar um ambiente virtual que replica fielmente as atividades dos moradores em uma casa compartilhada. Isso é alcançado por meio da modelagem espacial, consideração das preferências dos usuários, coleta de dados de sensores e uma rotina personalizável, garantindo que os dados gerados sejam precisos e relevantes para uma ampla variedade de aplicações, desde automação residencial até análises de consumo de energia.
+The HESTIA application is a system designed to provide accurate and consistent data on device usage in shared environments, such as homes with multiple residents. The system combines different functionalities to create a virtual environment that faithfully replicates the activities of residents in a shared house. This is achieved through spatial modeling, consideration of user preferences, sensor data collection, and a customizable routine, ensuring that the generated data is accurate and relevant for a wide variety of applications, ranging from home automation to energy consumption analysis.
 
-* **Fornecimento de Dados Consistentes:** O objetivo central da aplicação é oferecer dados consistentes que espelham fielmente as atividades dos moradores na casa. Isso é conseguido ao considerar suas rotinas diárias e preferências individuais. Os dados resultantes refletem um modelo confiável do comportamento dos usuários na residência.
+* **Consistent Data Provision:** The core objective of the application is to offer consistent data that accurately mirrors residents' activities in the house. This is achieved by considering their daily routines and individual preferences. The resulting data reflects a reliable model of user behavior in the residence.
 
-* **Modelo de Grafo para Representação:** A aplicação utiliza um modelo de grafo para representar a estrutura da casa. Nesse modelo, cada nó representa um cômodo, como quartos, banheiros e cozinhas, e as arestas indicam a distância e a conexão entre os cômodos. Isso permite à aplicação criar uma representação espacial realista e simular o movimento dos moradores na casa. O modelo de grafo é fundamental para gerar dados que levem em conta a proximidade dos cômodos e a dinâmica das atividades diárias.
+* **Graph Model for Representation:** The application uses a graph model to represent the structure of the house. In this model, each node represents a room, such as bedrooms, bathrooms, and kitchens, and the edges indicate the distance and connection between rooms. This allows the application to create a realistic spatial representation and simulate the movement of residents within the house. The graph model is essential for generating data that accounts for room proximity and the dynamics of daily activities.
 
-* **Geração de Dados Baseada em Rotinas:** A aplicação baseia-se em uma rotina semanal predefinida para criar dados. Essa rotina engloba uma ampla gama de atividades, como dormir, acordar, tomar banho, cozinhar, trabalhar, ouvir música, entre outras. No entanto, os horários e a frequência de cada atividade podem ser personalizados de acordo com as necessidades do pesquisador, resultando em uma variação leve e realista nas rotinas diárias.
+* **Routine-Based Data Generation:** The application relies on a predefined weekly routine to create data. This routine covers a wide range of activities, such as sleeping, waking up, taking a shower, cooking, working, listening to music, among others. However, the schedules and frequency of each activity can be customized according to the researcher's needs, resulting in a slight and realistic variation in daily routines.
 
-* **Consideração de Preferências dos Usuários:** A aplicação SSEDG pode utilizar as preferências individuais dos moradores. Isso significa que as configurações específicas, como temperatura desejada de um cômodo, iluminação ou preferências relacionadas a dispositivos inteligentes, são levadas em conta ao gerar dados. O sistema ajusta as rotinas e os parâmetros para atender às preferências exclusivas de cada usuário.
+* **User Preferences Consideration:**  The HESTIA application can utilize individual residents' preferences. This means that specific settings, such as desired room temperature, lighting, or preferences related to smart devices, are taken into account when generating data. The system adjusts routines and parameters to meet the unique preferences of each user.
 
-* **Variações nos Períodos de Atividade:** O sistema é flexível o suficiente para acomodar variações naturais nos horários das atividades dos moradores. Por exemplo, a hora de acordar ou dormir, ou os momentos de realizar atividades diárias, podem variar de um dia para o outro. A aplicação é capaz de acomodar essas variações para produzir dados que representem fielmente o comportamento real dos moradores.
+* **Activity Period Variations:** The system is flexible enough to accommodate natural variations in residents' activity schedules. For example, wake-up or sleep times, or moments for daily activities, may vary from day to day. The application is capable of accommodating these variations to produce data that accurately represents residents' real behavior.
 
-<h2 id="requisitos"> :toolbox: Requisitos</h2>
+<h2 id="requisitos"> :toolbox: Requirements</h2>
 
 * Python 3.10
+* Poetry
 
 
-<h2 id="instalacao"> :books: Gerando os Dados</h2>
+<h2 id="instalacao"> :books: Installation and data generation</h2>
 
-Antes de tudo realize clone do repositório do projeto SSEDG para a sua máquina. Para isso execute os seguintes comando no terminal.
+First of all, clone the HESTIA project repository to your machine. To do this, run the following commands in the terminal.
 
 ```
 git clone git@github.com:SSEDG/SSEDG.git
@@ -40,68 +41,107 @@ git fetch
 git checkout main
 git pull
 ```
-Para gerar um conjunto de dados simulados para ambientes inteligentes basta instalar as dependencias do projeto:
+To generate a simulated data set for smart environments, simply install the project dependencies:
 
 ```
-pip instal -r requirements.txt
+poetry install
 ```
-E excutando o comando abaixo no diretório raiz do projeto o sistema será inicializado.
+And by running the command below in the project root directory, the system will be initialized.
 ````
-python3 main.py
+poetry run python main.py
 ````
+When running it, you will be asked:
 
-Ao executa-lo será solicitado:
-- O tipo de saída dos dados (Completo ou Simples).
-- Quantidade de dias a serem simulados.
-- A rotina a ser utilizada.
+- The type of data output (Complete or Simple).
+- Number of days to be simulated.
+- The routine to be used.
 
-A partir disso teremos, uma saída de dados **Simples** ou uma saída de dados **Completa**. Os dados gerados são armazenados na pasta */dados*
+From this, you will have either a Simple or Complete data output. The generated data is stored in the _**/dados**_ folder.
 
-<h2 id="cenarios">:gear: Cenários</h2>
+
+<h2 id="cenarios">:gear: Scenarios</h2>
+Some basic routines were created that can be used to produce data. These routines are:
 
 ### Grafo_casa-ROTINA_SIMPLES(2usuarios)
-
-*MORADORES:* 
+*RESIDENTS:* 
 Gustavo, Amanda
 
-*ROTINA SIMPLIFICADA:*
-* Gustavo: Trabalho Remoto (8:00-12:00, 14:00 17:00)
-* Amanda: Trabalho presencial (sai 7:00, chega 18:00)
-* Fins de semana: Rotina variada(passear, lavar roupa)
-* Dormem: às 23 horas
-* Acordam: às 6 horas
+*SIMPLIFIED ROUTINE:*
+* Gustavo: Remote work (8:00-12:00, 14:00-17:00)
+* Amanda: In-person work (leaves 7:00, arrives 18:00)
+* Weekends: Varied routine (going out, doing laundry)
+* Sleeps: at 23:00
+* Wakes up: at 6:00
 
-*ATIVIDADES:*
+*ACTIVITIES:*
+Sleep, Poop, Pee, Take a shower, Brush your teeth, Have breakfast, Have lunch, Have dinner, Cook, Drink water, Work from home, Work outside, Watch TV, Listen to music, Go for a walk, Study, Do laundry, Clean the house
 
-Dormir, Caga, Mijar, Tomar banho, Escovar dentes, Café da manhã, Almoçar, Jantar, Cozinhar, Beber agua, Trabalhar home office, Trabalhar fora, Assistir TV, Ouvir música, Passear, Estudar, Lavar roupa, Limpar casa
+[Descrição completa aqui.]()
 
-*PLANTA BASE:*
-
-![planta_1](https://github.com/SSEDG/SSEDG/blob/main/doc/img/planta_1.png?raw=true)
 
 ### Grafo_casa-ROTINA_SIMPLES(Dividindo_ap)
 
-*MORADORES:*
+*RESIDENTS:*
 Andre, Vinicius
 
-*ROTINA SIMPLIFICADA:*
-* Andre: Trabalho presencial (sai 8:00, chega 13:00)
-* Andre: Trabalho presencial (sai 14:00, chega 17:00)
-* Andre: nas terças e quintas chega as 19:00
-* Andre: dorme as 00:00 acorda as 07:00
-* Vinicius: Na quarta aula presencial (sai 18:30, chega 20:30)
-* Vinicius: dorme as 00:00 acorda as 07:00
-* Vinicius: estuda em casa durante a semana e sai ocasionalmente
-* Fins de semana: Rotina variada(passear, lavar roupa, limpar casa)
+*SIMPLIFIED ROUTINE:*
+* Andre: In-person work (leaves 8:00, arrives 13:00)
+* Andre: In-person work (leaves 14:00, arrives 17:00)
+* Andre: on Tuesdays and Thursdays, arrives at 19:00
+* Andre: sleeps at 00:00, wakes up at 07:00
+* Vinicius: In the fourth in-person class (leaves 18:30, arrives 20:30)
+* Vinicius: sleeps at 00:00, wakes up at 07:00
+* Vinicius: studies at home during the week and goes out occasionally
+* Weekends: Varied routine (going for a walk, doing laundry, cleaning the house)
 
 
-*ATIVIDADES:*
+*ACTIVITIES:*
 
-Dormir, Caga, Mijar, Tomar banho, Escovar dentes, Café da manhã, Almoçar, Jantar, Cozinhar, Beber agua, Trabalhar fora, Ouvir música, Passear, Estudar, Limpar casa
+Sleep, Poop, Pee, Take a shower, Brush your teeth, Have breakfast, Have lunch, Have dinner, Cook, Drink water, Work outside, Listen to music, Go for a walk, Study, Clean the house
 
-*PLANTA BASE:*
+[Descrição completa aqui.]()
 
-![planta_2](https://github.com/SSEDG/SSEDG/blob/main/doc/img/lanta_2.png?raw=true)
+
+### Grafo_teste-grupo(3usuarios)
+*RESIDENTS:*
+Gustavo, Amanda, Vitor
+
+*SIMPLIFIED ROUTINE:*
+* Gustavo: Goes to the living room to watch TV.
+* Gustavo: Leaves the room occasionally.
+* Amanda: Prefers to watch TV for long periods and listen to music.
+* Amanda: Alternates between watching TV, listening to music, and going out for short periods.
+* Vitor: Prioritizes watching TV.
+* Vitor: Also occasionally studies in the living room and goes out for long periods.
+
+*ACTIVITIES:*
+Sleep, Watch TV, Listen to music, Study, Leave the room, Get home.
+
+[Descrição completa aqui.]()
+
+
+### Cenario_validacao_Artigo(1usuarios-casa-mayki)
+*RESIDENTS:*
+Mayki
+
+*SIMPLIFIED ROUTINE:*
+* Mayki: Uses the computer in the bedroom at different times of the day and night.
+* Mayki: Takes short breaks and leaves the room.
+* Mayki: Prepares breakfast, brushes teeth and performs simple activities such as “doing nothing”.
+* Mayki: Sleeps regularly for 6 to 8 hours.
+* Mayki: Also uses the computer at dawn, especially on weekends.
+
+
+*ACTIVITIES:*
+Sleep, Use the computer, Brush teeth, Prepare breakfast, Do nothing, Leave the room, Go to the balcony, Drink water, Use the bathroom, Prepare a snack, Clean the room.
+
+[Descrição completa aqui.]()
+
+
+<h2 id="cenarios">:office: Responsible</h2>
+For more details, contact one of the responsible researchers:
+maykioliveira@ufba.br - Mayki Santos (researcher/developer)
+denis.boaventura@ufba.br  - Denis Robson (researcher/developer)
 
 
 
