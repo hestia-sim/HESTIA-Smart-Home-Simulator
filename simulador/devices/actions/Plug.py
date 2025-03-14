@@ -20,8 +20,8 @@ class Plug(DeviceBase):
     def is_ligado(self) -> bool:
         return self.switch_1 == Status.ON
 
-    def mudar(self, usuario_action: Usuario, switch: str, nome_atividade: str):
-        self.switch_1 = Status[switch]
+    def mudar(self, usuario_action: Usuario, switch_1: str, nome_atividade: str):
+        self.switch_1 = Status[switch_1]
         self._mensagem(usuario_action, nome_atividade)
 
     def _mensagem(self, usuario: Usuario, nome_atividade: str) -> None:
