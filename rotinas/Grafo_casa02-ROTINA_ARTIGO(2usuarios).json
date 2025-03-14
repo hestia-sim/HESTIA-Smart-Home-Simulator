@@ -474,7 +474,7 @@
 			"inicio_ocorrencia": null,
 			"fim_ocorrencia": null,
 			"duracao": 240,
-			"taxa_erro": 0.0,
+			"taxa_erro": 0.1,
 			"local_atividade": "RUA",
 			"atividades_associadas": {},
 			"lista_atuadores_atividade": null

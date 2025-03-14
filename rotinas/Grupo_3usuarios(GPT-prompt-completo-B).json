@@ -1,0 +1,1088 @@
+{
+  "ATUADORES": [
+    "LAMPADA",
+    "CAFETEIRA",
+    "PLUG",
+    "SOM",
+    "AR_CONDICIONADO",
+    "TV",
+    "SENSOR_PRESENCA"
+  ],
+
+  "COMODOS": {
+    "rua": {
+      "nome": "RUA",
+      "atuadores": [],
+      "ocupacao_maxima": 10
+    },
+    "sala": {
+      "nome": "SALA",
+      "atuadores": [
+        "LAMPADA",
+        "SOM",
+        "AR_CONDICIONADO",
+        "TV",
+        "SENSOR_PRESENCA"
+      ],
+      "ocupacao_maxima": 5
+    },
+    "cozinha": {
+      "nome": "COZINHA",
+      "atuadores": [
+        "LAMPADA",
+        "CAFETEIRA",
+        "PLUG",
+        "SENSOR_PRESENCA"
+      ],
+      "ocupacao_maxima": 3
+    },
+    "banheiro": {
+      "nome": "BANHEIRO",
+      "atuadores": [
+        "LAMPADA",
+        "SENSOR_PRESENCA"
+      ],
+      "ocupacao_maxima": 2
+    },
+    "quarto_casal": {
+      "nome": "QUARTO_CASAL",
+      "atuadores": [
+        "LAMPADA",
+        "AR_CONDICIONADO",
+        "SENSOR_PRESENCA"
+      ],
+      "ocupacao_maxima": 2
+    },
+    "quarto_filho": {
+      "nome": "QUARTO_FILHO",
+      "atuadores": [
+        "LAMPADA",
+        "AR_CONDICIONADO",
+        "SENSOR_PRESENCA",
+        "TV"
+      ],
+      "ocupacao_maxima": 1
+    }
+  },
+
+  "GRAFO_COMODOS": [
+    ["RUA", "SALA", 5],
+    ["SALA", "COZINHA", 3],
+    ["SALA", "BANHEIRO", 2],
+    ["SALA", "QUARTO_CASAL", 4],
+    ["SALA", "QUARTO_FILHO", 4]
+  ],
+
+  "ATIVIDADES": {
+    "DORMIR_NOITE": {
+      "nome": "DORMIR_NOITE",
+      "duracao": 480,
+      "taxa_erro": 0.1,
+      "local_atividade": "QUARTO_CASAL",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["OFF", "P"],
+        "AR_CONDICIONADO": ["ON", "P"]
+      }
+    },
+    "DORMIR_MADRUGADA": {
+      "nome": "DORMIR_MADRUGADA",
+      "duracao": 360,
+      "taxa_erro": 0.1,
+      "local_atividade": "QUARTO_CASAL",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["OFF", "P"],
+        "AR_CONDICIONADO": ["ON", "P"]
+      }
+    },
+    "ASSISTIR_FILMES": {
+      "nome": "ASSISTIR_FILMES",
+      "duracao": 120,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {
+        "TV": ["ON", "D"],
+        "LAMPADA": ["OFF", "P"]
+      }
+    },
+    "JOGAR_VIDEOGAMES": {
+      "nome": "JOGAR_VIDEOGAMES",
+      "duracao": 120,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {
+        "TV": ["ON", "D"],
+        "SOM": ["ON", "P"]
+      }
+    },
+    "SAIR_PARA_O_TRABALHO": {
+      "nome": "SAIR_PARA_O_TRABALHO",
+      "duracao": 480,
+      "taxa_erro": 0.1,
+      "local_atividade": "RUA",
+      "lista_atuadores_atividade": {}
+    },
+    "BEBER_AGUA": {
+      "nome": "BEBER_AGUA",
+      "duracao": 5,
+      "taxa_erro": 0.1,
+      "local_atividade": "COZINHA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "TOMAR_BANHO": {
+      "nome": "TOMAR_BANHO",
+      "duracao": 15,
+      "taxa_erro": 0.1,
+      "local_atividade": "BANHEIRO",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "ESCOVAR_DENTES": {
+      "nome": "ESCOVAR_DENTES",
+      "duracao": 5,
+      "taxa_erro": 0.1,
+      "local_atividade": "BANHEIRO",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "LEVANTAR_SE_DA_CAMA": {
+      "nome": "LEVANTAR_SE_DA_CAMA",
+      "duracao": 10,
+      "taxa_erro": 0.1,
+      "local_atividade": "QUARTO_CASAL",
+      "lista_atuadores_atividade": {}
+    },
+    "DESLOCAR_SE_PELA_CASA": {
+      "nome": "DESLOCAR_SE_PELA_CASA",
+      "duracao": 30,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {}
+    },
+    "TROCAR_SE_AO_LONGO_DO_DIA": {
+      "nome": "TROCAR_SE_AO_LONGO_DO_DIA",
+      "duracao": 10,
+      "taxa_erro": 0.1,
+      "local_atividade": "QUARTO_CASAL",
+      "lista_atuadores_atividade": {}
+    },
+    "LAVAR_A_LOUCA": {
+      "nome": "LAVAR_A_LOUCA",
+      "duracao": 15,
+      "taxa_erro": 0.1,
+      "local_atividade": "COZINHA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "LIMPEZA_E_ORGANIZACAO": {
+      "nome": "LIMPEZA_E_ORGANIZACAO",
+      "duracao": 60,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "P"]
+      }
+    },
+    "USAR_BANHEIRO": {
+      "nome": "USAR_BANHEIRO",
+      "duracao": 5,
+      "taxa_erro": 0.1,
+      "local_atividade": "BANHEIRO",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "PREPARAR_COMIDA": {
+      "nome": "PREPARAR_COMIDA",
+      "duracao": 30,
+      "taxa_erro": 0.1,
+      "local_atividade": "COZINHA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "P"],
+        "CAFETEIRA": ["OFF", "D"],
+        "PLUG": ["OFF", "D"]
+      }
+    },
+    "CAMINHAR_DENTRO_DE_CASA": {
+      "nome": "CAMINHAR_DENTRO_DE_CASA",
+      "duracao": 30,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {}
+    },
+    "TOMAR_BANHO_SOZINHO": {
+      "nome": "TOMAR_BANHO_SOZINHO",
+      "duracao": 15,
+      "taxa_erro": 0.1,
+      "local_atividade": "BANHEIRO",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "LAVAR_O_ROSTO_E_AS_MAOS": {
+      "nome": "LAVAR_O_ROSTO_E_AS_MAOS",
+      "duracao": 5,
+      "taxa_erro": 0.1,
+      "local_atividade": "BANHEIRO",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "PENTEAR_O_CABELO": {
+      "nome": "PENTEAR_O_CABELO",
+      "duracao": 5,
+      "taxa_erro": 0.1,
+      "local_atividade": "BANHEIRO",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "P"]
+      }
+    },
+    "BARBEAR_SE": {
+      "nome": "BARBEAR_SE",
+      "duracao": 10,
+      "taxa_erro": 0.1,
+      "local_atividade": "BANHEIRO",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "VESTIR_SE": {
+      "nome": "VESTIR_SE",
+      "duracao": 10,
+      "taxa_erro": 0.1,
+      "local_atividade": "QUARTO_CASAL",
+      "lista_atuadores_atividade": {}
+    },
+    "COLOCAR_E_TIRAR_OS_SAPATOS": {
+      "nome": "COLOCAR_E_TIRAR_OS_SAPATOS",
+      "duracao": 5,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {}
+    },
+    "USAR_O_BANHEIRO_SOZINHO": {
+      "nome": "USAR_O_BANHEIRO_SOZINHO",
+      "duracao": 5,
+      "taxa_erro": 0.1,
+      "local_atividade": "BANHEIRO",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "COMER": {
+      "nome": "COMER",
+      "duracao": 20,
+      "taxa_erro": 0.1,
+      "local_atividade": "COZINHA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "LAVAR_AS_MAOS_ANTES_DEPOIS_REFEICOES": {
+      "nome": "LAVAR_AS_MAOS_ANTES_DEPOIS_REFEICOES",
+      "duracao": 5,
+      "taxa_erro": 0.1,
+      "local_atividade": "BANHEIRO",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "DESCANSAR_NA_CAMA": {
+      "nome": "DESCANSAR_NA_CAMA",
+      "duracao": 60,
+      "taxa_erro": 0.1,
+      "local_atividade": "QUARTO_CASAL",
+      "lista_atuadores_atividade": {}
+    },
+    "DESCANSAR_NO_SOFA": {
+      "nome": "DESCANSAR_NO_SOFA",
+      "duracao": 60,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["OFF", "P"]
+      }
+    },
+    "PREPARAR_REFEICOES_SIMPLES": {
+      "nome": "PREPARAR_REFEICOES_SIMPLES",
+      "duracao": 20,
+      "taxa_erro": 0.1,
+      "local_atividade": "COZINHA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "P"],
+        "CAFETEIRA": ["OFF", "D"],
+        "PLUG": ["OFF", "D"]
+      }
+    },
+    "LAVAR_LOUCA_APOS_REFEICOES": {
+      "nome": "LAVAR_LOUCA_APOS_REFEICOES",
+      "duracao": 15,
+      "taxa_erro": 0.1,
+      "local_atividade": "COZINHA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "FAZER_COMPRAS_NO_MERCADO": {
+      "nome": "FAZER_COMPRAS_NO_MERCADO",
+      "duracao": 60,
+      "taxa_erro": 0.1,
+      "local_atividade": "RUA",
+      "lista_atuadores_atividade": {}
+    },
+    "LAVAR_E_SECAR_ROUPAS": {
+      "nome": "LAVAR_E_SECAR_ROUPAS",
+      "duracao": 45,
+      "taxa_erro": 0.1,
+      "local_atividade": "RUA",
+      "lista_atuadores_atividade": {}
+    },
+    "PASSAR_ROUPAS": {
+      "nome": "PASSAR_ROUPAS",
+      "duracao": 30,
+      "taxa_erro": 0.1,
+      "local_atividade": "QUARTO_CASAL",
+      "lista_atuadores_atividade": {}
+    },
+    "ORGANIZAR_A_CASA": {
+      "nome": "ORGANIZAR_A_CASA",
+      "duracao": 60,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "P"]
+      }
+    },
+    "TROCAR_A_ROUPA_DE_CAMA": {
+      "nome": "TROCAR_A_ROUPA_DE_CAMA",
+      "duracao": 15,
+      "taxa_erro": 0.1,
+      "local_atividade": "QUARTO_CASAL",
+      "lista_atuadores_atividade": {}
+    },
+    "COMPARECER_A_CONSULTAS_MEDICAS": {
+      "nome": "COMPARECER_A_CONSULTAS_MEDICAS",
+      "duracao": 120,
+      "taxa_erro": 0.1,
+      "local_atividade": "RUA",
+      "lista_atuadores_atividade": {}
+    },
+    "FAZER_PEQUENOS_REPAROS": {
+      "nome": "FAZER_PEQUENOS_REPAROS",
+      "duracao": 30,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {}
+    },
+    "USAR_TELEFONE": {
+      "nome": "USAR_TELEFONE",
+      "duracao": 10,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {}
+    },
+    "LIDAR_COM_SITUACOES_INESPERADAS": {
+      "nome": "LIDAR_COM_SITUACOES_INESPERADAS",
+      "duracao": 60,
+      "taxa_erro": 0.1,
+      "local_atividade": "RUA",
+      "lista_atuadores_atividade": {}
+    },
+    "CONVERSAR_E_SOCIALIZAR": {
+      "nome": "CONVERSAR_E_SOCIALIZAR",
+      "duracao": 60,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "P"]
+      }
+    },
+    "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS": {
+      "nome": "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+      "duracao": 90,
+      "taxa_erro": 0.1,
+      "local_atividade": "SALA",
+      "lista_atuadores_atividade": {
+        "SOM": ["ON", "P"]
+      }
+    },
+    "LAVAR_O_ROSTO_AO_ACORDAR": {
+      "nome": "LAVAR_O_ROSTO_AO_ACORDAR",
+      "duracao": 5,
+      "taxa_erro": 0.1,
+      "local_atividade": "BANHEIRO",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "D"]
+      }
+    },
+    "ORGANIZAR_ALIMENTOS": {
+      "nome": "ORGANIZAR_ALIMENTOS",
+      "duracao": 20,
+      "taxa_erro": 0.1,
+      "local_atividade": "COZINHA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "P"]
+      }
+    },
+    "LIMPAR_E_ORGANIZAR_ARMARIOS": {
+      "nome": "LIMPAR_E_ORGANIZAR_ARMARIOS",
+      "duracao": 45,
+      "taxa_erro": 0.1,
+      "local_atividade": "COZINHA",
+      "lista_atuadores_atividade": {
+        "LAMPADA": ["ON", "P"]
+      }
+    },
+    "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM": {
+      "nome": "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+      "duracao": 30,
+      "taxa_erro": 0.1,
+      "local_atividade": "RUA",
+      "lista_atuadores_atividade": {}
+    }
+  },
+
+  "USUARIOS": {
+    "mae": {
+      "nome": "Maria",
+      "prioridade": 1,
+      "comodo_atual": "RUA",
+      "preferencia": {
+        "SALA": {
+          "LAMPADA": {
+            "switch_led": "ON",
+            "bright_value_v2": 700,
+            "temp_value_v2": 350
+          },
+          "AR_CONDICIONADO": {
+            "switch": "ON",
+            "temp_set": 23,
+            "mode": "AUTO"
+          },
+          "TV": {
+            "switch": "OFF",
+            "sound_volume": 40
+          },
+          "SOM": {
+            "switch": "OFF",
+            "sound_volume": 20
+          }
+        },
+        "QUARTO_CASAL": {
+          "LAMPADA": {
+            "switch_led": "OFF",
+            "bright_value_v2": 200,
+            "temp_value_v2": 150
+          },
+          "AR_CONDICIONADO": {
+            "switch": "ON",
+            "temp_set": 20,
+            "mode": "AUTO"
+          }
+        },
+        "COZINHA": {
+          "LAMPADA": {
+            "switch_led": "ON",
+            "bright_value_v2": 500,
+            "temp_value_v2": 250
+          },
+          "CAFETEIRA": {
+            "switch": "ON"
+          },
+          "PLUG": {
+            "switch_1": "OFF"
+          }
+        },
+        "BANHEIRO": {
+          "LAMPADA": {
+            "switch_led": "ON",
+            "bright_value_v2": 300,
+            "temp_value_v2": 200
+          }
+        }
+      },
+      "rotina_semana": [
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "ASSISTIR_FILMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "BEBER_AGUA",
+          "ORGANIZAR_A_CASA",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "ASSISTIR_FILMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "BEBER_AGUA",
+          "ORGANIZAR_A_CASA",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "ASSISTIR_FILMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "BEBER_AGUA",
+          "ORGANIZAR_A_CASA",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "ASSISTIR_FILMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ]
+      ]
+    },
+
+    "pai": {
+      "nome": "Joao",
+      "prioridade": 2,
+      "comodo_atual": "RUA",
+      "preferencia": {
+        "SALA": {
+          "LAMPADA": {
+            "switch_led": "ON",
+            "bright_value_v2": 600,
+            "temp_value_v2": 300
+          },
+          "AR_CONDICIONADO": {
+            "switch": "ON",
+            "temp_set": 24,
+            "mode": "AUTO"
+          },
+          "TV": {
+            "switch": "ON",
+            "sound_volume": 50
+          },
+          "SOM": {
+            "switch": "ON",
+            "sound_volume": 40
+          }
+        },
+        "QUARTO_CASAL": {
+          "LAMPADA": {
+            "switch_led": "OFF",
+            "bright_value_v2": 250,
+            "temp_value_v2": 150
+          },
+          "AR_CONDICIONADO": {
+            "switch": "ON",
+            "temp_set": 19,
+            "mode": "AUTO"
+          }
+        },
+        "COZINHA": {
+          "LAMPADA": {
+            "switch_led": "ON",
+            "bright_value_v2": 400,
+            "temp_value_v2": 200
+          },
+          "CAFETEIRA": {
+            "switch": "OFF"
+          },
+          "PLUG": {
+            "switch_1": "OFF"
+          }
+        },
+        "BANHEIRO": {
+          "LAMPADA": {
+            "switch_led": "ON",
+            "bright_value_v2": 200,
+            "temp_value_v2": 100
+          }
+        }
+      },
+      "rotina_semana": [
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "ASSISTIR_FILMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "BEBER_AGUA",
+          "ORGANIZAR_A_CASA",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "ASSISTIR_FILMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "BEBER_AGUA",
+          "ORGANIZAR_A_CASA",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "ASSISTIR_FILMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "BEBER_AGUA",
+          "ORGANIZAR_A_CASA",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "CONVERSAR_E_SOCIALIZAR",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ]
+      ]
+    },
+
+    "filho": {
+      "nome": "Carlos",
+      "prioridade": 3,
+      "comodo_atual": "RUA",
+      "preferencia": {
+        "SALA": {
+          "LAMPADA": {
+            "switch_led": "ON",
+            "bright_value_v2": 600,
+            "temp_value_v2": 300
+          },
+          "AR_CONDICIONADO": {
+            "switch": "OFF",
+            "temp_set": 24,
+            "mode": "AUTO"
+          },
+          "TV": {
+            "switch": "ON",
+            "sound_volume": 60
+          },
+          "SOM": {
+            "switch": "ON",
+            "sound_volume": 50
+          }
+        },
+        "QUARTO_FILHO": {
+          "LAMPADA": {
+            "switch_led": "OFF",
+            "bright_value_v2": 200,
+            "temp_value_v2": 150
+          },
+          "AR_CONDICIONADO": {
+            "switch": "ON",
+            "temp_set": 22,
+            "mode": "COLL"
+          },
+          "TV": {
+            "switch": "ON",
+            "sound_volume": 70
+          }
+        },
+        "COZINHA": {
+          "LAMPADA": {
+            "switch_led": "ON",
+            "bright_value_v2": 400,
+            "temp_value_v2": 200
+          },
+          "CAFETEIRA": {
+            "switch": "OFF"
+          },
+          "PLUG": {
+            "switch_1": "OFF"
+          }
+        },
+        "BANHEIRO": {
+          "LAMPADA": {
+            "switch_led": "ON",
+            "bright_value_v2": 180,
+            "temp_value_v2": 100
+          }
+        }
+      },
+      "rotina_semana": [
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "ASSISTIR_FILMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "ORGANIZAR_A_CASA",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "ASSISTIR_FILMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "ORGANIZAR_A_CASA",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "ASSISTIR_FILMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "ORGANIZAR_A_CASA",
+          "DORMIR_NOITE"
+        ],
+        [
+          "DORMIR_MADRUGADA",
+          "LEVANTAR_SE_DA_CAMA",
+          "LAVAR_O_ROSTO_AO_ACORDAR",
+          "ESCOVAR_DENTES",
+          "COMER",
+          "BEBER_AGUA",
+          "DESLOCAR_SE_PELA_CASA",
+          "JOGAR_VIDEOGAMES",
+          "LAVAR_LOUCA_APOS_REFEICOES",
+          "LIMPEZA_E_ORGANIZACAO",
+          "PREPARAR_COMIDA",
+          "COMER",
+          "DESCANSAR_NO_SOFA",
+          "PARTICIPAR_DE_ATIVIDADES_RECREATIVAS",
+          "USAR_BANHEIRO",
+          "CAMINHAR_DENTRO_DE_CASA",
+          "BEBER_AGUA",
+          "REGAR_PLANTAS_OU_CUIDAR_DO_JARDIM",
+          "DORMIR_NOITE"
+        ]
+      ]
+    }
+  },
+
+  "AUTOMACAO": []
+}
