@@ -46,15 +46,18 @@ class DeviceBase(ABC):
         self._mensagem(usuario_action, nome_atividade)
 
     def compara_message(self, message: dict):
-        for dicionario in message["status"]:
-            dicionario.pop("t", None)
-        message = str(message)
+        if self.tipo_selecionado == "completo":
+            for dicionario in message["status"]:
+                dicionario.pop("t", None)
+            message = str(message)
 
         if message != self.mensagem_anteior:
             self.mensagem_anteior = str(message)
             return True
         else:
             return False
+
+
 
     @abstractmethod
     def is_ligado(self) -> bool:

@@ -128,9 +128,9 @@ random.seed(123)
 if __name__ == "__main__":
     tipos = ['completo', 'simples', 'back']
     dias_simulacao = 14
-    nome_rotina = "Cenario_validacao_Artigo(1usuarios-casa-mayki)"
+    nome_rotina = "gemini"
 
-    generate_data_debug(tipos[0], dias_simulacao, nome_rotina)
+    generate_data_debug(tipos[1], dias_simulacao, nome_rotina)
     # total = {}
     # with open('teste_tempo.csv', 'a') as f:
     #
